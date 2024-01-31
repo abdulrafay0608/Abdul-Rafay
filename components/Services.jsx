@@ -3,7 +3,6 @@ import React from 'react'
 
 const Services = () => {
     return (
-        
                 <div className="md:h-screen mt-12">
                     <h2 className="text-center text-5xl font-extrabold">Services</h2>
                     <p className="text-center font-mono">"Excellence in Every Service"</p>
