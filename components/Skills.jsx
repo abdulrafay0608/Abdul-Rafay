@@ -1,7 +1,6 @@
-"use client"
-
 import Image from 'next/image'
-import React, { useEffect } from 'react'
+import React from 'react'
+import SkillBar from './SkillBar'
 const Skills = () => {
 
     return (
@@ -12,121 +11,21 @@ const Skills = () => {
                     "Learning is the compass that guides us; every acquired skill is a marker on the journey of continuous growth."</p>
 
                 <div class="block md:flex justify-evenly items-center  w-full my-16">
-
                     <div className='md:w-5/12'>
-
-                        <div class="mb-6 mx-2">
-                            <Image className='rounded-full bg-white animate-bounce' height={50} width={50} src={"/skills/html.svg"} alt='html-logo' />
-                            <div className='flex justify-between  items-center mx-2' style={{ width: "90%" }}>
-                                <span class="text-xl font-mono mb-2">HTML5</span>
-                                <span className='text-base text-white bg-slate-600 rounded-full p-1 font-extrabold italic mb-2' >90%</span>
-                            </div>
-                            <div class="items-center flex justify-start h-6 w-full bg-slate-900 shadow-slate-500 shadow-md border-4 border-double border-slate-300 rounded-full relative">
-                                <div class="h-2 bg-yellow-400 text-right rounded-full mx-1" style={{ width: "90%" }}></div>
-                            </div>
-                        </div>
-
-                        <div class="mb-6 mx-2">
-                            <Image className=' animate-bounce' height={50} width={50} src={"/skills/css.svg"} alt='css-logo' />
-                            <div className='flex justify-between  items-center mx-2' style={{ width: "80%" }}>
-                                <span class="text-xl font-mono mb-2">CSS3</span>
-                                <span className='text-base text-white bg-slate-600 rounded-full p-1 font-extrabold italic mb-2' >80%</span>
-                            </div>
-                            <div class="items-center flex justify-start h-6 w-full bg-slate-900 shadow-slate-500 shadow-md border-4 border-double border-slate-300 rounded-full relative">
-                                <div class="h-2 bg-yellow-400 text-right rounded-full mx-1" style={{ width: "80%" }}></div>
-                            </div>
-                        </div>
-
-                        <div class="mb-6 mx-2">
-                            <Image className='rounded-full animate-bounce' height={50} width={50} src={"/skills/js.svg"} alt='javascript-logo' />
-                            <div className='flex justify-between  items-center mx-2' style={{ width: "75%" }}>
-                                <span class="text-xl font-mono mb-2">JavaScript & ECMA Script</span>
-                                <span className='text-base text-white bg-slate-600 rounded-full p-1 font-extrabold italic mb-2' >75%</span>
-                            </div>
-                            <div class="items-center flex justify-start h-6 w-full bg-slate-900 shadow-slate-500 shadow-md border-4 border-double border-slate-300 rounded-full relative">
-                                <div class="h-2 bg-yellow-400 text-right rounded-full mx-1" style={{ width: "75%" }}></div>
-                            </div>
-                        </div>
-
-                        <div class="mb-6 mx-2">
-                            <Image className='rounded-full animate-bounce' height={50} width={50} src={"/skills/github.webp"} alt='github-logo' />
-                            <div className='flex justify-between  items-center mx-2' style={{ width: "80%" }}>
-                                <span class="text-xl font-mono mb-2">Github</span>
-                                <span className='text-base text-white bg-slate-600 rounded-full p-1 font-extrabold italic mb-2' >80%</span>
-                            </div>
-                            <div class="items-center flex justify-start h-6 w-full bg-slate-900 shadow-slate-500 shadow-md border-4 border-double border-slate-300 rounded-full relative">
-                                <div class="h-2 bg-yellow-400 text-right rounded-full mx-1" style={{ width: "80%" }}></div>
-                            </div>
-                        </div>
-
-                        <div class="mb-6 mx-2">
-                            <Image className='rounded-full animate-bounce' height={50} width={50} src={"/skills/tailwind.svg"} alt='tailwind-logo' />
-                            <div className='flex justify-between  items-center mx-2' style={{ width: "80%" }}>
-                                <span class="text-xl font-mono mb-2">Tailwind CSS & BootStrap 5</span>
-                                <span className='text-base text-white bg-slate-600 rounded-full p-1 font-extrabold italic mb-2' >80%</span>
-                            </div>
-                            <div class="items-center flex justify-start h-6 w-full bg-slate-900 shadow-slate-500 shadow-md border-4 border-double border-slate-300 rounded-full relative">
-                                <div class="h-2 bg-yellow-400 text-right rounded-full mx-1" style={{ width: "80%" }}></div>
-                            </div>
-                        </div>
-
+                        <SkillBar skillName="HTML5" percentage={80} logoSrc="/skills/html.svg" />
+                        <SkillBar skillName="CSS3" percentage={80} logoSrc="/skills/css.svg" />
+                        <SkillBar skillName="JavaScript & ECMA Script" percentage={70} logoSrc="/skills/js.svg" />
+                        <SkillBar skillName="Github" percentage={80} logoSrc="/skills/github.webp" />
+                        <SkillBar skillName="Tailwind CSS & BootStrap 5" percentage={75} logoSrc="/skills/tailwind.svg" />
+                    </div>
+                    <div className='md:w-5/12'>
+                        <SkillBar skillName="Firebase" percentage={75} logoSrc="/skills/firebase.webp" />
+                        <SkillBar skillName="React" percentage={75} logoSrc="/skills/reactjs.svg" />
+                        <SkillBar skillName="Next js" bgcolor={"bg-white p-2"} subname={"(React Framework)"} percentage={75} logoSrc="/skills/next.svg" />
+                        <SkillBar skillName="Node js & Express js" percentage={55} logoSrc="/skills/nodeJs.png" />
+                        <SkillBar skillName="React Native" percentage={55} logoSrc="/skills/reactjs.svg" />
                     </div>
 
-                    <div className='md:w-5/12'>
-
-                        <div class="mb-6 mx-2">
-                            <Image className='rounded-full animate-bounce' height={50} width={50} src={"/skills/firebase.webp"} alt='firebase-logo' />
-                            <div className='flex justify-between  items-center mx-2' style={{ width: "80%" }}>
-                                <span class="text-xl font-mono mb-2">Firebase</span>
-                                <span className='text-base text-white bg-slate-600 rounded-full p-1 font-extrabold italic mb-2' >80%</span>
-                            </div>
-                            <div class="items-center flex justify-start h-6 w-full bg-slate-900 shadow-slate-500 shadow-md border-4 border-double border-slate-300 rounded-full relative">
-                                <div class="h-2 bg-yellow-400 text-right rounded-full mx-1" style={{ width: "80%" }}></div>
-                            </div>
-                        </div>
-
-                        <div class="mb-6 mx-2">
-                            <Image className='rounded-ful animate-bounce' height={50} width={50} src={"/skills/reactjs.svg"} alt='react-logo' />
-                            <div className='flex justify-between  items-center mx-2' style={{ width: "70%" }}>
-                                <span class="text-xl font-mono mb-2">React</span>
-                                <span className='text-base text-white bg-slate-600 rounded-full p-1 font-extrabold italic mb-2' >70%</span>
-                            </div>
-                            <div class="items-center flex justify-start h-6 w-full bg-slate-900 shadow-slate-500 shadow-md border-4 border-double border-slate-300 rounded-full relative">
-                                <div class="h-2 bg-yellow-400 text-right rounded-full mx-1" style={{ width: "70%" }}></div>
-                            </div>
-                        </div>
-                        <div class="mb-6 mx-2">
-                            <Image className='rounded-full animate-bounce object-contain bg-white  p-2' height={50} width={50} src={"/skills/next.svg"} alt='nextjs-logo' />
-                            <div className='flex justify-between  items-center mx-2' style={{ width: "75%" }}>
-                                <span class="text-xl font-mono mb-2">Next js <span className='font-light text-sm'> (React Framework) </span> </span>
-                                <span className='text-base text-white bg-slate-600 rounded-full p-1 font-extrabold italic mb-2' >75%</span>
-                            </div>
-                            <div class="items-center flex justify-start h-6 w-full bg-slate-900 shadow-slate-500 shadow-md border-4 border-double border-slate-300 rounded-full relative">
-                                <div class="h-2 bg-yellow-400 text-right rounded-full mx-1" style={{ width: "75%" }}></div>
-                            </div>
-                        </div>
-
-                        <div class="mb-6 mx-2">
-                            <Image className='rounded-ful animate-bounce' height={50} width={50} src={"/skills/nodeJs.png"} alt='nodejs-logo' />
-                            <div className='flex justify-between items-center mx-2' style={{ width: "55%" }}>
-                                <span class="text-xl font-mono mb-2">Node js & Express js </span>
-                                <span className='text-base text-white bg-slate-600 rounded-full p-1 font-extrabold italic mb-2' >55%</span>
-                            </div>
-                            <div class="items-center flex justify-start h-6 w-full bg-slate-900 shadow-slate-500 shadow-md border-4 border-double border-slate-300 rounded-full relative">
-                                <div class="h-2 bg-yellow-400 text-right rounded-full mx-1" style={{ width: "55%" }}></div>
-                            </div>
-                        </div>
-                        <div class="mb-6 mx-2">
-                            <Image className='rounded-full animate-bounce' height={50} width={50} src={"/skills/reactjs.svg"} alt='react-native-logo' />
-                            <div className='flex justify-between  items-center mx-2' style={{ width: "52%" }}>
-                                <span class="text-xl font-mono mb-2">React Native</span>
-                                <span className='text-base text-white bg-slate-600 rounded-full p-1 font-extrabold italic mb-2' >50%</span>
-                            </div>
-                            <div class="items-center flex justify-start h-6 w-full bg-slate-900 shadow-slate-500 shadow-md border-4 border-double border-slate-300 rounded-full relative">
-                                <div class="h-2 bg-yellow-400 text-right rounded-full mx-1" style={{ width: "52%" }}></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
 
