@@ -33,4 +33,4 @@ const SocialIcon = () => {
     )
 }
 
-export default SocialIcon
+export default SocialIcon;

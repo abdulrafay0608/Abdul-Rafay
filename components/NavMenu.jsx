@@ -7,7 +7,6 @@ import { FaProjectDiagram } from "react-icons/fa";
 import { MdOutlineContactPhone } from "react-icons/md";
 
 
-
 export const NavMenu = [
     {
         title: "Home",
