@@ -96,7 +96,7 @@ const Skills = () => {
                             </div>
                         </div>
                         <div class="mb-6 mx-2">
-                        <Image className='rounded-full animate-bounce object-contain bg-white  p-2' height={50} width={50} src={"/skills/next.svg"} />
+                            <Image className='rounded-full animate-bounce object-contain bg-white  p-2' height={50} width={50} src={"/skills/next.svg"} />
                             <div className='flex justify-between  items-center mx-2' style={{ width: "75%" }}>
                                 <span class="text-xl font-mono mb-2">Next js <span className='font-light text-sm'> (React Framework) </span> </span>
                                 <span className='text-base text-white bg-slate-600 rounded-full p-1 font-extrabold italic mb-2' >75%</span>
@@ -107,7 +107,7 @@ const Skills = () => {
                         </div>
 
                         <div class="mb-6 mx-2">
-                        <Image className='rounded-ful animate-bounce' height={50} width={50} src={"/skills/nodeJs.png"} />
+                            <Image className='rounded-ful animate-bounce' height={50} width={50} src={"/skills/nodeJs.png"} />
                             <div className='flex justify-between items-center mx-2' style={{ width: "55%" }}>
                                 <span class="text-xl font-mono mb-2">Node js & Express js </span>
                                 <span className='text-base text-white bg-slate-600 rounded-full p-1 font-extrabold italic mb-2' >55%</span>
@@ -116,19 +116,8 @@ const Skills = () => {
                                 <div class="h-2 bg-yellow-400 text-right rounded-full mx-1" style={{ width: "55%" }}></div>
                             </div>
                         </div>
-                        {/* 
                         <div class="mb-6 mx-2">
-                            <div className='flex justify-between  items-center mx-2' style={{ width: "55%" }}>
-                                <span class="text-2xl font-extrabold mb-2">Express js</span>
-                                <span className='text-base text-white bg-slate-600 rounded-full p-1 font-extrabold italic mb-2' >55%</span>
-                            </div>
-                            <div class="items-center flex justify-start h-6 w-full bg-slate-900 shadow-slate-500 shadow-md border-4 border-double border-slate-300 rounded-full relative">
-                                <div class="h-2 bg-yellow-400 text-right rounded-full mx-1" style={{ width: "55%" }}></div>
-                            </div>
-                        </div> */}
-
-                        <div class="mb-6 mx-2">
-                        <Image className='rounded-full animate-bounce' height={50} width={50} src={"/skills/reactjs.svg"} />
+                            <Image className='rounded-full animate-bounce' height={50} width={50} src={"/skills/reactjs.svg"} />
                             <div className='flex justify-between  items-center mx-2' style={{ width: "52%" }}>
                                 <span class="text-xl font-mono mb-2">React Native</span>
                                 <span className='text-base text-white bg-slate-600 rounded-full p-1 font-extrabold italic mb-2' >50%</span>

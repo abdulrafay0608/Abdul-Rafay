@@ -1,7 +1,6 @@
+
 import Image from 'next/image'
 import React from 'react'
-import { GrBottomCorner } from "react-icons/gr";
-import { GrTopCorner } from "react-icons/gr";
 
 const About = () => {
     return (
@@ -46,29 +45,7 @@ const About = () => {
                                 </tr>
                             </tbody>
                         </table>
-                        {/* <div className='my-6'>
-                            <div className='flex items-center'>
-                                <div className='w-28' >Name</div>
-                                <div className='w-4'>:</div>
-                                <div className='text-yellow-400'> Abdul Rafay</div>
-                            </div>
-                            <div className='flex  items-center'>
-                                <div className='w-28'>Date of birth</div>
-                                <div className='w-4'>:</div>
-                                <div className='text-yellow-400'>August 06, 2033</div>
-                            </div>
-                            <div className='flex items-center'>
-                                <div className='w-28'>Address</div>
-                                <div className='w-4'>:</div>
-                                <div className='text-yellow-400'>Karachi, Pakistan</div>
-                            </div>
-                            <div className='flex items-center'>
-                                <div className='w-28' >Phone no.</div>
-                                <div className='w-4'>:</div>
-                                <div className='text-yellow-400'>+92-316-0025477</div>
-                            </div>
-                        </div> */}
-
+                       
                         <div className='my-3'>
                             <button className='border-double border-4 hover:border-yellow-400 border-white rounded-md py-1 px-3 mr-5 font-bold transition duration-300 ease-out hover:ease-in hover:shadow-md hover:shadow-white shadow shadow-yellow-400 ' >Resume</button>
                         </div>

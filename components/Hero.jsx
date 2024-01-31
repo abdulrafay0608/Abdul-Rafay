@@ -1,3 +1,4 @@
+
 import Image from 'next/image'
 import React from 'react'
 import SocialIcon from './SocialIcon'
@@ -24,8 +25,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div style={{backgroundImage: "url(/assets/picture.jpg)"}} className='brightness-50 md:brightness-100 h-[350px] w-full md:max-w-[350px] bg-cover bg-no-repeat bg-right shadow-2xl shadow-white/30 bg-slate-50 rounded-full'>
-                    {/* <Image className='rounded-full  object-contain' src={"/assets/picture.jpg"}
-                        height={350} width={350} alt='My Picture' /> */}
+                  {/* bg image */}
                 </div>
             </div>
 
