@@ -9,7 +9,7 @@ const About = () => {
 
             <div className='flex flex-col md:flex-row justify-evenly items-center my-12 md:my-20'>
                 <div className='shadow-2xl shadow-white/50 rounded-md m-6' >
-                    <Image className='rounded-lg' src={"/assets/picture2.jpg"}
+                    <img className='rounded-lg' src={"/assets/picture2.jpg"}
                         height={350} width={350} alt='My Picture' />
                 </div>
                 <div>
