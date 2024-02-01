@@ -1,7 +1,7 @@
-import About from "@/components/About";
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import Skills from "@/components/Skills";
+import About from "@/components/About.jsx";
+import Hero from "@/components/Hero.jsx";
+import Services from "@/components/Services.jsx";
+import Skills from "@/components/Skills.jsx";
 
 // "use client"
 export default function Home() {
