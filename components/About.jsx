@@ -6,10 +6,9 @@ const About = () => {
     return (
         <div className="md:h-screen mt-12">
             <h2 className="text-center text-5xl font-extrabold">About us </h2>
-
             <div className='flex flex-col md:flex-row justify-evenly items-center my-12 md:my-20'>
                 <div className='shadow-2xl shadow-white/50 rounded-md m-6' >
-                    <img className='rounded-lg' src={"/assets/picture2.jpg"}
+                    <Image className='rounded-lg' src={"/assets/picture2.jpg"}
                         height={350} width={350} alt='My Picture' />
                 </div>
                 <div>
