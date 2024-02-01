@@ -4,7 +4,7 @@ const SkillBar = ({ skillName, bgcolor, subname, percentage, logoSrc }) => {
     return (
         <>
             <div className="mb-6 mx-2">
-                <img className={`rounded-full animate-bounce ${bgcolor}`} height={50} width={50} src={logoSrc} alt={`skill-logo`} />
+                <img className={`rounded-full animate-bounce ${bgcolor}`} height={50} width={50} src={logoSrc} alt="skill logo" />
                 <div className="flex justify-between items-center mx-2" style={{ width: `${percentage}%` }}>
                     <span className="text-xl font-mono mb-2">{skillName} <span className='font-light text-sm'> {subname} </span> </span>
                     <span className="text-base text-white bg-slate-600 rounded-full p-1 font-extrabold italic mb-2">{percentage}%</span>
