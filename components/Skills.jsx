@@ -8,7 +8,7 @@ const Skills = () => {
             <div className="mt-12">
                 <h2 className="text-center text-5xl font-extrabold">Services</h2>
                 <p className="text-center mx-2 font-mono">
-                    "Learning is the compass that guides us; every acquired skill is a marker on the journey of continuous growth."</p>
+                &quot;Learning is the compass that guides us; every acquired skill is a marker on the journey of continuous growth.&quot;</p>
 
                 <div class="block md:flex justify-evenly items-center  w-full my-16">
                     <div className='md:w-5/12'>

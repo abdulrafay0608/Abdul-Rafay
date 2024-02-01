@@ -5,7 +5,7 @@ const Services = () => {
     return (
                 <div className="md:h-screen mt-12">
                     <h2 className="text-center text-5xl font-extrabold">Services</h2>
-                    <p className="text-center font-mono">"Excellence in Every Service"</p>
+                    <p className="text-center font-mono">&quot;Excellence in Every Service&quot;</p>
 
                     <div class="container px-5 py-24 mx-auto">
 

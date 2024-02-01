@@ -45,7 +45,7 @@ const About = () => {
                                 </tr>
                             </tbody>
                         </table>
-                       
+
                         <div className='my-3'>
                             <button className='border-double border-4 hover:border-yellow-400 border-white rounded-md py-1 px-3 mr-5 font-bold transition duration-300 ease-out hover:ease-in hover:shadow-md hover:shadow-white shadow shadow-yellow-400 ' >Resume</button>
                         </div>
