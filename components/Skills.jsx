@@ -10,7 +10,7 @@ const Skills = () => {
                 <p className="text-center mx-2 font-mono">
                 &quot;Learning is the compass that guides us; every acquired skill is a marker on the journey of continuous growth.&quot;</p>
 
-                <div class="block md:flex justify-evenly items-center  w-full my-16">
+                <div className="block md:flex justify-evenly items-center  w-full my-16">
                     <div className='md:w-5/12'>
                         <SkillBar skillName="HTML5" percentage={80} logoSrc="/skills/html.svg" />
                         <SkillBar skillName="CSS3" percentage={80} logoSrc="/skills/css.svg" />

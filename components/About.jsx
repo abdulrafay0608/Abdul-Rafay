@@ -21,7 +21,7 @@ const About = () => {
                             foundation in HTML, CSS, and JavaScript, I excel at transforming
                             designs into functional, intuitive, and visually stunning websites.
                         </p>
-                        <table class="my-6">
+                        <table className="my-6">
                             <tbody>
                                 <tr>
                                     <td className='w-28'>Name</td>
