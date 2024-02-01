@@ -9,23 +9,23 @@ const SocialIcon = () => {
     return (
         <div className='flex justify-center items-center gap-4'>
             <Link href={""}>
-                <div class="shadow shadow-yellow-500 hover:shadow-white border-dotted border-2 text-yellow-400 border-yellow-400 hover:border-white hover:text-white p-2 rounded-full transition duration-300 ease-out">
+                <div className="shadow shadow-yellow-500 hover:shadow-white border-dotted border-2 text-yellow-400 border-yellow-400 hover:border-white hover:text-white p-2 rounded-full transition duration-300 ease-out">
                     <FaFacebookF />
                 </div>
             </Link>
             <Link href={""}>
-                <div class="shadow shadow-yellow-500 hover:shadow-white border-dotted border-2 text-yellow-400 border-yellow-400 hover:border-white hover:text-white p-2 rounded-full transition duration-300 ease-out">
+                <div className="shadow shadow-yellow-500 hover:shadow-white border-dotted border-2 text-yellow-400 border-yellow-400 hover:border-white hover:text-white p-2 rounded-full transition duration-300 ease-out">
                     <FaLinkedinIn />
 
                 </div>
             </Link>
             <Link href={""}>
-                <div class="shadow shadow-yellow-500 hover:shadow-white border-dotted border-2 text-yellow-400 border-yellow-400 hover:border-white hover:text-white p-2 rounded-full transition duration-300 ease-out">
+                <div className="shadow shadow-yellow-500 hover:shadow-white border-dotted border-2 text-yellow-400 border-yellow-400 hover:border-white hover:text-white p-2 rounded-full transition duration-300 ease-out">
                     <TbBrandGithubFilled />
                 </div>
             </Link>
             <Link href={""}>
-                <div class="shadow shadow-yellow-500 hover:shadow-white border-dotted border-2 text-yellow-400 border-yellow-400 hover:border-white hover:text-white p-2 rounded-full transition duration-300 ease-out">
+                <div className="shadow shadow-yellow-500 hover:shadow-white border-dotted border-2 text-yellow-400 border-yellow-400 hover:border-white hover:text-white p-2 rounded-full transition duration-300 ease-out">
                     <IoMdMail />
                 </div>
             </Link>
