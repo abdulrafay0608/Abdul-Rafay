@@ -13,7 +13,7 @@ const About = () => {
                 </div>
                 <div>
                     <div className='mx-3'>
-                        <h2 className='md:text-3xl text-2xl font-extrabold my-4'>I'm <span className=' text-yellow-400'>Abdul Rafay</span>  & I'm a <span className=' text-yellow-400'>Web Developer</span> </h2>
+                        <h2 className='md:text-3xl text-2xl font-extrabold my-4'>I&apos;m <span className=' text-yellow-400'>Abdul Rafay</span>  &amp; I&apos;m a <span className=' text-yellow-400'>Web Developer</span> </h2>
                         <p className='text-justify md:w-[600px]'>As a passionate front-end developer,
                             I am dedicated to creating immersive web experiences
                             that captivate users and drive results. With a strong

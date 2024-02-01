@@ -9,9 +9,9 @@ const Hero = () => {
             <div className='relative flex flex-col-reverse md:flex-row justify-evenly items-center h-[90vh] '>
                 <div className='absolute z-10 mx-3 md:mx-0 md:relative '>
                     <h3 className='font-bold text-2xl md:text-3xl text-yellow-400'>Hello...</h3>
-                    <h2 className='md:text-5xl text-3xl font-extrabold my-4'>I'm <span className=' text-yellow-400'>Abdul Rafay</span></h2>
+                    <h2 className='md:text-5xl text-3xl font-extrabold my-4'>I&apos;m <span className=' text-yellow-400'>Abdul Rafay</span></h2>
                     <p className='text  md:w-96'>As a passionate front-end developer,
-                        I am dedicated to creating immersive web experiences
+                        I&apos;m dedicated to creating immersive web experiences
                         that captivate users and drive results. With a strong
                         foundation in HTML, CSS, and JavaScript, I excel at transforming
                         designs into functional, intuitive, and visually stunning websites.
