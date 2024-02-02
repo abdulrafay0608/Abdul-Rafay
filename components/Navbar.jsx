@@ -34,6 +34,7 @@ const Navbar = () => {
           <Link
             key={index}
             href={menu.url}
+            onClick={() => setIsOpen(!isOpen)} 
             className={`${theme === "dark" ? "text-white hover:text-white/70 " : "text-slate-950 hover:text-slate-800"}  font-bold hover:underline flex items-center gap-1`}
           >
             <span className='text-[16px]'>{menu.icon}</span>
@@ -69,6 +70,7 @@ const Navbar = () => {
             <Link
               key={index}
               href={menu.url}
+              onClick={() => setIsOpen(!isOpen)} 
               className={`${theme === "dark" ? "text-white font-bold hover:text-white/70 " : "text-slate-950 font-bold hover:text-slate-800"} flex items-center p-3`}
             >
               <span className='text-[16px]'>{menu.icon}</span>

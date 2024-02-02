@@ -15,15 +15,16 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-.light{
+
+/* .light {
   background-color: #fff;
-  color:"#000"
+  color: "#000"
 }
 
-.Dark{
+.Dark {
   background-color: rgb(3, 3, 53);
-  color:"#fff"
-}
+  color: "#fff"
+} */
 
 
 /* @layer base {
@@ -47,3 +48,102 @@
   }
 } */
 /* styles/globals.css or a new stylesheet */
+
+
+.scroll-item {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  box-shadow: 0 1px 17px 0 rgba(0, 0, 0, 0.75);
+}
+
+
+.scroll-item:nth-child(1) {
+  background: url(/assets/web1.png);
+  background-size: cover;
+  background-position: top;
+  opacity: 60%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
+/* .scroll-item:nth-child(2) {
+  background: url(/assets/web2.png);
+  background-size: cover;
+  background-position: top;
+  transition: all 1s ease;
+}
+
+.scroll-item:nth-child(3) {
+  background: url(/assets/web3.png);
+  background-size: cover;
+  background-position: top;
+  transition: all 1s ease;
+} */
+
+.scroll-item:hover .magic-text {
+  display: none;
+}
+
+/* .scroll-item img {
+  width: 100%;
+  display: block;
+} */
+
+.scroll-item:hover{
+  background-position: bottom;
+ 
+}
+
+/* .scroll-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 3rem;
+} */
+
+/* .text-container {
+  background-color: #fff;
+  color: #000;
+  font-weight: bolder;
+  width: max-content;
+  box-shadow: 0 1px 5px 4px #000;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: bottom 0.3s ease;
+} */
+
+/* .text button{
+  margin: 0 1rem;
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+} */
+
+/* .scroll-item:hover .text-container {
+  display: none;
+}
+
+
+
+@media screen and (max-width: 992px) {
+  .scroll-list {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 3rem 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .scroll-list {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 3rem 0;
+  }
+} */
+

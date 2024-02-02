@@ -4,11 +4,11 @@ import SkillBar from './SkillBar'
 const Skills = () => {
 
     return (
-        <div>
+        <section id='skills'>
             <div className="mt-12">
                 <h2 className="text-center text-5xl font-extrabold">Services</h2>
                 <p className="text-center mx-2 font-mono">
-                &quot;Learning is the compass that guides us; every acquired skill is a marker on the journey of continuous growth.&quot;</p>
+                    &quot;Learning is the compass that guides us; every acquired skill is a marker on the journey of continuous growth.&quot;</p>
 
                 <div className="block md:flex justify-evenly items-center  w-full my-16">
                     <div className='md:w-5/12'>
@@ -30,99 +30,7 @@ const Skills = () => {
 
 
             </div>
-
-
-
-
-            {/* <div class="column right">
-                <div class="bars">
-                    <div class="info">
-                        <span>HTML5</span>
-
-                    </div>
-                    <div class="line html"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>CSS3</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="line css"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>JavaScript</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="line js"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>ECMAScript</span>
-                        <span>70%</span>
-                    </div>
-                    <div class="line ecmascript"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>Firebase</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="line firebase"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>React.js</span>
-                        <span>70%</span>
-                    </div>
-                    <div class="line react"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>Next.js</span>
-                        <span>70%</span>
-                    </div>
-                    <div class="line next"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>Node.js</span>
-                        <span>50%</span>
-                    </div>
-                    <div class="line node"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>Express.js</span>
-                        <span>50%</span>
-                    </div>
-                    <div class="line express"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>Github</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="line github"></div>
-                </div>
-
-                <div class="bars">
-                    <div class="info">
-                        <span>BootStrap 5</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="line bootstrap"></div>
-                </div>
-                <div class="bars">
-                    <div class="info">
-                        <span>Social Media Post Making</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="line smpm"></div>
-                </div>
-
-            </div> */}
-        </div>
+        </section>
     )
 }
 
