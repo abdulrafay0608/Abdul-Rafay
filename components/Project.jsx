@@ -27,7 +27,7 @@ const Project = () => {
 
                     <div className="text-container">
                         <h2 className='text-center text-2xl font-extrabold my-4'>Amazone Clone</h2>
-                        <p className='mx-6 text-slate-300'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda consequatur magnam animi totam tempora, repellendus rem nihil neque ratione maxime vitae voluptas eius omnis vel enim dolor ex nisi velit?</p>
+                        <p className='mx-6 text-center text-slate-300'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda consequatur magnam animi totam tempora, repellendus rem nihil neque ratione maxime vitae voluptas eius omnis vel enim dolor ex nisi velit?</p>
                         <div className='flex justify-center items-center gap-2'>
                             <div className='bg-slate-950 border-4 border-double border-yellow-400 text-white font-bold py-1 px-2 rounded-md '>
                                 HTML
@@ -57,7 +57,7 @@ const Project = () => {
                 <div className='grid md:grid-cols-2 grid-flow-col-1 justify-center items-center bg-slate-900 hover:bg-slate-950 transition-all p-4 border-4 border-double my-12 border-yellow-400 mx-2 md:mx-20'>
                     <div className="text-container">
                         <h2 className='text-center text-2xl font-extrabold my-4'>Amazone Clone</h2>
-                        <p className='mx-6 text-slate-300'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda consequatur magnam animi totam tempora, repellendus rem nihil neque ratione maxime vitae voluptas eius omnis vel enim dolor ex nisi velit?</p>
+                        <p className='mx-6 text-center text-slate-300'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda consequatur magnam animi totam tempora, repellendus rem nihil neque ratione maxime vitae voluptas eius omnis vel enim dolor ex nisi velit?</p>
                         <div className='flex justify-center items-center gap-2'>
                             <div className='bg-slate-950 border-4 border-double border-yellow-400 text-white font-bold py-1 px-2 rounded-md '>
                                 HTML
@@ -102,7 +102,7 @@ const Project = () => {
 
                     <div className="text-container">
                         <h2 className='text-center text-2xl font-extrabold my-4'>Amazone Clone</h2>
-                        <p className='mx-6 text-slate-300'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda consequatur magnam animi totam tempora, repellendus rem nihil neque ratione maxime vitae voluptas eius omnis vel enim dolor ex nisi velit?</p>
+                        <p className='mx-6 text-center text-slate-300'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda consequatur magnam animi totam tempora, repellendus rem nihil neque ratione maxime vitae voluptas eius omnis vel enim dolor ex nisi velit?</p>
                         <div className='flex justify-center items-center gap-2'>
                             <div className='bg-slate-950 border-4 border-double border-yellow-400 text-white font-bold py-1 px-2 rounded-md '>
                                 HTML
@@ -131,7 +131,7 @@ const Project = () => {
                 <div className='grid md:grid-cols-2 grid-flow-col-1 justify-center items-center bg-slate-900 hover:bg-slate-950 transition-all p-4 border-4 border-double my-12 border-yellow-400 mx-2 md:mx-20'>
                     <div className="text-container">
                         <h2 className='text-center text-2xl font-extrabold my-4'>Amazone Clone</h2>
-                        <p className='mx-6 text-slate-300'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda consequatur magnam animi totam tempora, repellendus rem nihil neque ratione maxime vitae voluptas eius omnis vel enim dolor ex nisi velit?</p>
+                        <p className='mx-6 text-center text-slate-300'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda consequatur magnam animi totam tempora, repellendus rem nihil neque ratione maxime vitae voluptas eius omnis vel enim dolor ex nisi velit?</p>
                         <div className='flex justify-center items-center gap-2'>
                             <div className='bg-slate-950 border-4 border-double border-yellow-400 text-white font-bold py-1 px-2 rounded-md '>
                                 HTML
