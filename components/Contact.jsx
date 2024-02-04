@@ -29,8 +29,7 @@ const Contact = () => {
         <section id='contact'>
             <div className="mt-12 pb-10">
                 <h2 className="text-center text-5xl font-extrabold">Get in Touch</h2>
-                <p className="text-center font-mono pb-12">&quot;Let's Turn Your Ideas into Reality&quot;</p>
-                <div className="block md:flex justify-center items-center md:gap-4">
+                <p className="text-center font-mono pb-12">{`"Let's Turn Your Ideas into Reality"`}</p>                <div className="block md:flex justify-center items-center md:gap-4">
                     <div className=' bg-slate-900 rounded-md p-4 mx-2 md:p-10'>
                         <h1 className='font-bold text-2xl'><span className='border-b-2 border-yellow-400'>SAY SOM</span>ETHING</h1>
 
