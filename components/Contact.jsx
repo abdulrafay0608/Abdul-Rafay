@@ -16,7 +16,7 @@ const Contact = () => {
         const email = e.target[1].value;
         const password = e.target[2].value;
         const message = e.target[3].value;
-        
+
         // Send data to API or perform other actions
         console.log('Name:', name);
         console.log('Email:', email);
