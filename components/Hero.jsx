@@ -13,7 +13,7 @@ const Hero = () => {
                     <h3 className='font-bold text-xl md:text-2xl '>Welcome to My Corner of the Web!</h3>
                     <h2 className='text-yellow-400 md:text-5xl text-3xl font-extrabold my-4 '>Abdul Rafay</h2>
                     <h3 className='flex items-center text-xl md:text-3xl font-bold my-4'>I&apos;m &nbsp; <span className='text-yellow-400'> <TypingAnimation /></span></h3>
-                    <p className='md:w-[500px]'>"Passionate Frontend Developer | Crafting Digital Experiences"
+                    <p className='md:w-[500px]'>&quot;Passionate Frontend Developer | Crafting Digital Experiences&quot;
                     </p>
                     <div className='my-3'>
                         <button className='border-double border-4 border-yellow-400 hover:border-white rounded-md py-1 px-3 mr-5 font-bold transition duration-300 ease-out hover:ease-in hover:shadow-md hover:shadow-yellow-400 shadow shadow-white ' >Hire me</button>
