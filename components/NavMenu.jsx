@@ -29,8 +29,8 @@ export const NavMenu = [
         icon: < GiSkills />
     },
     {
-        title: "Project",
-        url: "#project",
+        title: "Portfolio",
+        url: "#portfolio",
         icon: < FaProjectDiagram />
     },
     {

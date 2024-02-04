@@ -8,10 +8,10 @@ import { FaGithub } from "react-icons/fa6";
 // grid grid-cols-3 gap-8 mt-12
 const Project = () => {
     return (
-        <section id='project'>
+        <section id='portfolio'>
             
             <div className="mt-20">
-                <h2 className="text-center text-5xl font-extrabold">Project</h2>
+                <h2 className="text-center text-5xl font-extrabold">Portfolio</h2>
                 <p className="text-center mx-2 font-mono">
                     &quot;Each project is a unique piece of development.&quot;
                 </p>

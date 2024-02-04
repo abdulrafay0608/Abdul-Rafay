@@ -1,39 +1,41 @@
+"use client"
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 import { TfiEmail } from "react-icons/tfi";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { CiLocationOn } from "react-icons/ci";
 
 const Contact = () => {
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     const name = e.target.name.value;
-    //     const email = e.target.email.value;
-    //     const password = e.target.password.value;
-
-    //     if (!name || !email || !password) {
-    //         alert('Please fill in all fields');
-    //         return;
-    //     }
-
-    //     // Send data to API or perform other actions
-    //     console.log('Name:', name);
-    //     console.log('Email:', email);
-    //     console.log('Password:', password);
-    // };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log(e.target);
+        const name = e.target[0].value;
+        const email = e.target[1].value;
+        const password = e.target[2].value;
+        const message = e.target[3].value;
+        
+        // Send data to API or perform other actions
+        console.log('Name:', name);
+        console.log('Email:', email);
+        console.log('Password:', password);
+        console.log('Message:', message);
+    };
 
 
     return (
         <section id='contact'>
-            <div className="my-12">
-                <h2 className="text-center text-4xl font-extrabold my-6">GET IN TOUCH</h2>
+            <div className="mt-12 pb-10">
+                <h2 className="text-center text-5xl font-extrabold">Get in Touch</h2>
+                <p className="text-center font-mono pb-12">&quot;Let's Turn Your Ideas into Reality&quot;</p>
 
-                <div className="block md:flex justify-between items-center gap-4 md:p-20 px-2">
+                <div className="block md:flex justify-center items-center md:gap-4">
+                    <div className=' bg-slate-900 rounded-md p-4 mx-2 md:p-10'>
+                        <h1 className='font-bold text-2xl'><span className='border-b-2 border-yellow-400'>SAY SOM</span>ETHING</h1>
 
-                    <div className=' bg-slate-900 rounded-md px-3 py-6'>
-                        <h1 className='font-bold text-2xl '><span className='border-b-2 border-yellow-400'>SAY SOM</span>ETHING</h1>
-
-                        <form onSubmit={"handleSubmit"} className="my-8">
+                        <form onSubmit={handleSubmit} className="my-4">
 
                             <div className='grid md:grid-cols-2 grid-flow-col-1 md:justify-center items-center gap-6 my-6'>
                                 <input
@@ -42,7 +44,7 @@ const Contact = () => {
                                     id="name"
                                     name="name"
                                     required
-                                    autoComplete={false}
+                                    autoComplete='off'
                                     className="w-full py-2 bg-transparent border-b-2 border-b-slate-500 outline-none transition-all focus:border-yellow-400"
                                 />
 
@@ -52,7 +54,7 @@ const Contact = () => {
                                     id="email"
                                     name="email"
                                     required
-                                    autoComplete={false}
+                                    autoComplete='off'
                                     className="w-full py-2 bg-transparent border-b-2 border-b-slate-500 outline-none transition-all focus:border-yellow-400"
                                 />
                             </div>
@@ -63,65 +65,72 @@ const Contact = () => {
                                 id="subject"
                                 name="subject"
                                 required
-                                autoComplete={false}
+                                autoComplete='off'
                                 className="w-full py-2 bg-transparent border-b-2 border-b-slate-500 outline-none transition-all focus:border-yellow-400"
                             />
 
                             <textarea name="message" id="" cols="30" rows="4"
                                 placeholder='Your message *'
                                 required
-                                autoComplete={false}
+                                autoComplete='off'
                                 className="w-full my-6 py-2 bg-transparent border-b-2 border-b-slate-500 outline-none transition-all focus:border-yellow-400"
                             >
 
                             </textarea>
-
-                            <Link href={""}>
-                                <button className='border-double border-4 border-yellow-400 hover:border-white rounded-md py-1 px-3 mr-5 font-bold transition duration-300 ease-out hover:ease-in hover:shadow-md hover:shadow-yellow-400 shadow shadow-white ' >Send Message</button>
-                            </Link>
+                            <button className='border-double border-4 border-yellow-400 hover:border-white rounded-md py-1 px-3 mr-5 font-bold transition duration-300 ease-out hover:ease-in hover:shadow-md hover:shadow-yellow-400 shadow shadow-white ' >Send Message</button>
                         </form>
                     </div>
 
-                    <div className="col-span-1 mx-2 p-2">
-                        <div className="block md:flex justify-center items-center border-double border-slate-400 border-4 p-3 my-5 rounded-lg">
-                            <div className="text-2xl w-min border-double border-4 text-yellow-400 border-yellow-400 p-4 rounded-full ">
-                                <TfiEmail />
-                            </div>
-                            <div className="mx-4">
-                                <h2 className="text-white title-font font-medium">Our Email</h2>
-                                <Link href={""} className='text-yellow-300'>abdulrafay0608@gmail.com</Link>
-                            </div>
-                        </div>
+                    <div className="my-6 mx-2 md:w-[390px] ">
 
-                        <div className="block md:flex items-center border-double border-slate-400 border-4 p-3 my-5 rounded-lg">
-                            <div className="text-2xl  w-min border-double border-4 text-yellow-400 border-yellow-400 p-4 rounded-full ">
-                                <TfiEmail />
+                        <Link href={"/"}>
+                            <div className="flex justify-start items-center bg-slate-900 border-double border-slate-400 border-4 rounded-lg py-3 my-4">
+                                <div className="text-lg md:text-xl w-min border-double border-4 text-yellow-400 border-yellow-400 p-3 rounded-full mx-2 md:mx-4">
+                                    <TfiEmail />
+                                </div>
+                                <div className="">
+                                    <h2 className="text-white title-font font-md">Our Email</h2>
+                                    <p className='text-sm text-yellow-300'>abdulrafay0608@gmail.com</p>
+                                </div>
                             </div>
-                            <div className="mx-4">
-                                <h2 className="text-white title-font font-medium">Our Email</h2>
-                                <Link href={""} className='text-yellow-300'>abdulrafay0608@gmail.com</Link>
-                            </div>
-                        </div>
+                        </Link>
 
-                        <div className="block md:flex items-center border-double border-slate-400 border-4 p-3 my-5 rounded-lg">
-                            <div className="text-2xl  w-min border-double border-4 text-yellow-400 border-yellow-400 p-4 rounded-full ">
-                                <TfiEmail />
+                        <Link href={"/"}>
+                            <div className="flex justify-start items-center bg-slate-900 border-double border-slate-400 border-4 rounded-lg py-3 my-4">
+                                <div className="text-lg md:text-xl w-min border-double border-4 text-yellow-400 border-yellow-400 p-3 rounded-full mx-2 md:mx-4">
+                                    <FaPhoneAlt />
+                                </div>
+                                <div className="">
+                                    <h2 className="text-white title-font font-md">Phone</h2>
+                                    <p className='text-sm text-yellow-300'>[ +92-316-0025477 ]</p>
+                                </div>
                             </div>
-                            <div className="mx-4">
-                                <h2 className="text-white title-font font-medium">Our Email</h2>
-                                <Link href={""} className='text-yellow-300'>abdulrafay0608@gmail.com</Link>
-                            </div>
-                        </div>
+                        </Link>
 
-                        <div className="block md:flex items-center border-double border-slate-400 border-4 p-3 my-5 rounded-lg">
-                            <div className="text-2xl  w-min border-double border-4 text-yellow-400 border-yellow-400 p-4 rounded-full ">
-                                <TfiEmail />
+                        <Link href={"/"}>
+                            <div className="flex justify-start items-center bg-slate-900 border-double border-slate-400 border-4 rounded-lg py-3 my-4">
+                                <div className="text-lg md:text-xl w-min border-double border-4 text-yellow-400 border-yellow-400 p-3 rounded-full mx-2 md:mx-4">
+                                    <FaLinkedinIn />
+                                </div>
+                                <div className="">
+                                    <h2 className="text-white title-font font-md">Linkedin</h2>
+                                    <p className='text-sm text-yellow-300'>linkedin.com/in/abdulrafay0608/</p>
+                                </div>
                             </div>
-                            <div className="mx-4">
-                                <h2 className="text-white title-font font-medium">Our Email</h2>
-                                <Link href={""} className='text-yellow-300'>abdulrafay0608@gmail.com</Link>
+                        </Link>
+
+                        <Link href={"/"}>
+                            <div className="flex justify-start items-center bg-slate-900 border-double border-slate-400 border-4 rounded-lg py-3 my-4">
+                                <div className="text-lg md:text-xl w-min border-double border-4 text-yellow-400 border-yellow-400 p-3 rounded-full mx-2 md:mx-4">
+                                    <CiLocationOn />
+                                </div>
+                                <div className="">
+                                    <h2 className="text-white title-font font-md">Our Location</h2>
+                                    <p className='text-sm text-yellow-300'>Pakistan, Karachi</p>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
+
                     </div>
 
 

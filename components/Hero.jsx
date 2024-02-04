@@ -2,19 +2,18 @@
 import Image from 'next/image'
 import React from 'react'
 import SocialIcon from './SocialIcon'
+import TypingAnimation from './TypingAnimation'
 
 const Hero = () => {
     return (
-        <section id='home'>
-            <div className='relative flex flex-col-reverse md:flex-row justify-evenly items-center h-[90vh] '>
+        <section className='md:h-screen h-[100vh]' id='home'>
+
+            <div className='relative flex flex-col-reverse md:flex-row justify-around items-center h-[90vh] '>
                 <div className='absolute z-10 mx-3 md:mx-0 md:relative '>
-                    <h3 className='font-bold text-2xl md:text-3xl text-yellow-400'>Hello...</h3>
-                    <h2 className='md:text-5xl text-3xl font-extrabold my-4'>I&apos;m <span className=' text-yellow-400'>Abdul Rafay</span></h2>
-                    <p className='md:w-96'>As a passionate front-end developer,
-                        I&apos;m dedicated to creating immersive web experiences
-                        that captivate users and drive results. With a strong
-                        foundation in HTML, CSS, and JavaScript, I excel at transforming
-                        designs into functional, intuitive, and visually stunning websites.
+                    <h3 className='font-bold text-xl md:text-2xl '>Welcome to My Corner of the Web!</h3>
+                    <h2 className='text-yellow-400 md:text-5xl text-3xl font-extrabold my-4 '>Abdul Rafay</h2>
+                    <h3 className='flex items-center text-xl md:text-3xl font-bold my-4'>I&apos;m &nbsp; <span className='text-yellow-400'> <TypingAnimation /></span></h3>
+                    <p className='md:w-[500px]'>"Passionate Frontend Developer | Crafting Digital Experiences"
                     </p>
                     <div className='my-3'>
                         <button className='border-double border-4 border-yellow-400 hover:border-white rounded-md py-1 px-3 mr-5 font-bold transition duration-300 ease-out hover:ease-in hover:shadow-md hover:shadow-yellow-400 shadow shadow-white ' >Hire me</button>
@@ -25,7 +24,6 @@ const Hero = () => {
                     </div>
                 </div>
                 <div style={{ backgroundImage: "url(/assets/picture.jpg)" }} className='brightness-50 md:brightness-100 h-[350px] w-full md:max-w-[350px] bg-cover bg-no-repeat bg-right shadow-2xl shadow-white/30 bg-slate-50 rounded-full'>
-                    {/* bg image */}
                 </div>
             </div>
         </section>

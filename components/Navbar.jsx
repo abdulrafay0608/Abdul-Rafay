@@ -1,21 +1,46 @@
 "use client"
 import { MdDarkMode } from "react-icons/md";
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { NavMenu } from './NavMenu';
 import Link from 'next/link';
 import { MdOutlineLightMode } from "react-icons/md";
 import { ThemeContext } from "@/context/ThemeProvider";
+import Image from "next/image";
 
 
 const Navbar = () => {
   const { theme, LightMode, DarkMode } = useContext(ThemeContext)
   const [isOpen, setIsOpen] = useState(false);
+  const [show, setShow] = useState("translate-y-0");
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (window.scrollY > 200) {
+      if (window.scrollY > lastScrollY && !isOpen) {
+        setShow("-translate-y-[60px]");
+      } else {
+        setShow("shadow-sm");
+      }
+    } else {
+      setShow("translate-y-0");
+    }
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [lastScrollY]);
+
+
 
   return (
-    <nav className={`${theme === "dark" ? "bg-slate-950 border-x-0 border-t-0 border border-b-slate-500 " : "bg-white"} flex items-center justify-around h-[70px] p-4 md:p-6"`}>
+    <nav className={`${theme === "dark" ? "bg-slate-900 border-x-0 border-t-0 border border-b-slate-500 " : "bg-white"} flex items-center justify-around h-[60px] p-4 md:p-6 z-20 sticky top-0 transition-transform duration-300 ${show}`}>
       <div>
         <span className={`${theme === "dark" ? "text-white" : "text-slate-950"} font-extrabold text-xl tracking-tight`}>
-          Abdul Rafay
+          <Image className="mix-blend-normal" height={160} width={160} src={"/assets/logo.png"} alt="logo" />
         </span>
       </div>
 
@@ -34,7 +59,7 @@ const Navbar = () => {
           <Link
             key={index}
             href={menu.url}
-            onClick={() => setIsOpen(!isOpen)} 
+            onClick={() => setIsOpen(!isOpen)}
             className={`${theme === "dark" ? "text-white hover:text-white/70 " : "text-slate-950 hover:text-slate-800"}  font-bold hover:underline flex items-center gap-1`}
           >
             <span className='text-[16px]'>{menu.icon}</span>
@@ -70,7 +95,7 @@ const Navbar = () => {
             <Link
               key={index}
               href={menu.url}
-              onClick={() => setIsOpen(!isOpen)} 
+              onClick={() => setIsOpen(!isOpen)}
               className={`${theme === "dark" ? "text-white font-bold hover:text-white/70 " : "text-slate-950 font-bold hover:text-slate-800"} flex items-center p-3`}
             >
               <span className='text-[16px]'>{menu.icon}</span>
