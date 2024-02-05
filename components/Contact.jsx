@@ -1,27 +1,42 @@
 "use client"
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
+import { ToastContainer, toast ,Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { TfiEmail } from "react-icons/tfi";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { CiLocationOn } from "react-icons/ci";
 
 const Contact = () => {
-
+    const form = useRef();
+    
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        console.log(e.target);
-        const name = e.target[0].value;
-        const email = e.target[1].value;
-        const password = e.target[2].value;
-        const message = e.target[3].value;
-
-        // Send data to API or perform other actions
-        console.log('Name:', name);
-        console.log('Email:', email);
-        console.log('Password:', password);
-        console.log('Message:', message);
+        e.preventDefault()
+        emailjs.sendForm('service_x7y2e2a', 'template_castwhp',
+            form.current, {
+            publicKey: 'ece_f0w8kKpakdWMn',
+        }).then(
+            () => {
+                console.log('SUCCESS!');
+            },
+            (error) => {
+                console.log('FAILED...', error.text);
+            },
+        );
+        toast.success('✅ Successfully Submitted!', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
     };
 
 
@@ -33,14 +48,14 @@ const Contact = () => {
                     <div className=' bg-slate-900 rounded-md p-4 mx-2 md:p-10'>
                         <h1 className='font-bold text-2xl'><span className='border-b-2 border-yellow-400'>SAY SOM</span>ETHING</h1>
 
-                        <form onSubmit={handleSubmit} className="my-4">
+                        <form ref={form} onSubmit={handleSubmit} className="my-4">
 
                             <div className='grid md:grid-cols-2 grid-flow-col-1 md:justify-center items-center gap-6 my-6'>
                                 <input
                                     placeholder='Name *'
                                     type="text"
                                     id="name"
-                                    name="name"
+                                    name="user_name"
                                     required
                                     autoComplete='off'
                                     className="w-full py-2 bg-transparent border-b-2 border-b-slate-500 outline-none transition-all focus:border-yellow-400"
@@ -50,7 +65,7 @@ const Contact = () => {
                                     placeholder='Email *'
                                     type="email"
                                     id="email"
-                                    name="email"
+                                    name="user_email"
                                     required
                                     autoComplete='off'
                                     className="w-full py-2 bg-transparent border-b-2 border-b-slate-500 outline-none transition-all focus:border-yellow-400"
@@ -61,7 +76,7 @@ const Contact = () => {
                                 placeholder='Subject *'
                                 type="text"
                                 id="subject"
-                                name="subject"
+                                name="user_subject"
                                 required
                                 autoComplete='off'
                                 className="w-full py-2 bg-transparent border-b-2 border-b-slate-500 outline-none transition-all focus:border-yellow-400"
@@ -70,12 +85,13 @@ const Contact = () => {
                             <textarea name="message" id="" cols="30" rows="4"
                                 placeholder='Your message *'
                                 required
+                                // value="Send"
                                 autoComplete='off'
                                 className="w-full my-6 py-2 bg-transparent border-b-2 border-b-slate-500 outline-none transition-all focus:border-yellow-400"
                             >
-
                             </textarea>
                             <button className='border-double border-4 border-yellow-400 hover:border-white rounded-md py-1 px-3 mr-5 font-bold transition duration-300 ease-out hover:ease-in hover:shadow-md hover:shadow-yellow-400 shadow shadow-white ' >Send Message</button>
+                            <ToastContainer />
                         </form>
                     </div>
 

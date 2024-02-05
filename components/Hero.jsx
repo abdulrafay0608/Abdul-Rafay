@@ -6,10 +6,10 @@ import TypingAnimation from './TypingAnimation'
 
 const Hero = () => {
     return (
-        <section className='md:h-screen h-[100vh]' id='home'>
+        <section className='' id='home'>
 
             <div className='relative flex flex-col-reverse md:flex-row justify-around items-center h-[90vh] '>
-                <div className='absolute z-10 mx-3 md:mx-0 md:relative '>
+                <div className='absolute mx-3 md:mx-0 md:relative '>
                     <h3 className='font-bold text-xl md:text-2xl '>Welcome to My Corner of the Web!</h3>
                     <h2 className='text-yellow-400 md:text-5xl text-3xl font-extrabold my-4 '>Abdul Rafay</h2>
                     <h3 className='flex items-center text-xl md:text-3xl font-bold my-4'>I&apos;m &nbsp; <span className='text-yellow-400'> <TypingAnimation /></span></h3>
@@ -23,7 +23,8 @@ const Hero = () => {
                         <SocialIcon />
                     </div>
                 </div>
-                <div style={{ backgroundImage: "url(/assets/picture.jpg)" }} className='brightness-50 md:brightness-100 h-[350px] w-full md:max-w-[350px] bg-cover bg-no-repeat bg-right shadow-2xl shadow-white/30 bg-slate-50 rounded-full'>
+                <div className='hidden md:block shadow-2xl rounded-full shadow-white/30 bg-slate-50'>
+                    <Image className='rounded-full' src={"/assets/picture.jpg"} height={400} width={400} alt='my picture' />
                 </div>
             </div>
         </section>
