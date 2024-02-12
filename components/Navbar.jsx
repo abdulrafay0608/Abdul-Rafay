@@ -37,11 +37,13 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`${theme === "dark" ? "bg-slate-900 border-x-0 border-t-0 border border-b-slate-500 " : "bg-white"} flex items-center justify-around h-[64px] px-4 md:p-8 z-50 sticky top-0 transition-transform duration-300 ${show}`}>
+    <nav className={`${theme === "dark" ? "bg-slate-900  border-b-slate-500 " : "bg-gray-100 border-b-slate-300 "} border-x-0 border-t-0 border flex items-center justify-around h-[64px] px-4 md:p-8 z-50 sticky top-0 transition-transform duration-300 ${show}`}>
       <div>
-        <span className={`${theme === "dark" ? "text-white" : "text-slate-950"} font-extrabold text-xl tracking-tight`}>
-          <Image className="mix-blend-normal" height={160} width={160} src={"/assets/logo.png"} alt="logo" />
-        </span>
+        <div className="">
+          <Image height={150} width={150} src={`${theme == "dark" ? "/assets/logodark.png" : "/assets/logolight.png"}`} alt="logo" />
+        </div>
+        {/* <span className={`${theme === "dark" ? "text-white" : "text-slate-950"} font-extrabold text-xl tracking-tight`}>
+        </span> */}
       </div>
 
       {/* Hamburger menu for smaller screens */}
@@ -69,7 +71,7 @@ const Navbar = () => {
       </div>
 
       {/* Dark and Light mode icons */}
-      <div onClick={theme == "dark" ? LightMode : DarkMode} className="flex items-center justify-center h-6 w-6 text-white">
+      <div onClick={theme == "dark" ? LightMode : DarkMode} className="flex items-center justify-center h-6 w-6 text-white transition-all duration-1000 ease-in-out	">
         {theme == "dark" ?
           <>
             <div className="text-white hover:text-white/70 font-bold flex justify-center items-center cursor-pointer">
@@ -90,7 +92,7 @@ const Navbar = () => {
 
       {/* Responsive menu for smaller screens */}
       {isOpen && (
-        <div className={`${theme === "dark" ? "bg-slate-900" : "bg-white"}  md:hidden fixed top-16 left-0 w-9/12 h-screen p-3 transition-transform duration-300 `}>
+        <div className={`${theme === "dark" ? "bg-slate-900" : "bg-slate-100"}  md:hidden fixed top-16 left-0 w-9/12 h-screen p-3 transition-transform duration-300 `}>
           {NavMenu.map((menu, index) => (
             <Link
               key={index}

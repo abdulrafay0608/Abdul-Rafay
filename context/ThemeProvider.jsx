@@ -17,7 +17,7 @@ const ThemeProvider = ({ children }) => {
     }
     return (
         <ThemeContext.Provider value={{ theme, DarkMode, LightMode }}>
-            <div className={`${theme  === "dark" ? "bg-slate-950 text-white" : "bg-slate-500 text-slate-950"}`}>
+            <div className={`${theme === "dark" ? "bg-slate-950 text-white" : "bg-white text-slate-900"}`}>
                 {children}
             </div>
         </ThemeContext.Provider>

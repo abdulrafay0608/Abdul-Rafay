@@ -1,11 +1,13 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useContext } from 'react'
 import SkillBar from './SkillBar'
+import { ThemeContext } from '@/context/ThemeProvider'
 // Learning is the compass that guides us; every acquired skill is a marker on the journey of continuous growth.
 const Skills = () => {
+    const { theme } = useContext(ThemeContext)
 
     return (
-        <section className='bg-slate-900 py-4' id='skills'>
+        <section className={`${theme === "dark" ? "bg-slate-900" : ""} py-4`} id='skills'>
 
             <div className='pt-12'>
                 <h2 className="text-center text-5xl font-extrabold">Skills</h2>

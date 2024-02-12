@@ -1,31 +1,36 @@
+"use client"
+
+import { ThemeContext } from '@/context/ThemeProvider';
 import Link from 'next/link';
-import React from 'react'
+import React, { useContext } from 'react'
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { TbBrandGithubFilled } from "react-icons/tb";
 
 const SocialIcon = () => {
+    const { theme } = useContext(ThemeContext)
+
     return (
         <div className='flex justify-center items-center gap-4'>
             <Link href={""}>
-                <div className="shadow shadow-yellow-500 hover:shadow-white border-dotted border-2 text-yellow-400 border-yellow-400 hover:border-white hover:text-white p-2 rounded-full transition duration-300 ease-out">
+                <div className={`${theme === "dark" ? "text-yellow-400 shadow-yellow-500 hover:shadow-white border-yellow-400 hover:border-white hover:text-white " : "text-slate-950 hover:bg-yellow-400 border-slate-950"} shadow border-dotted border-2 p-3 rounded-full transition duration-300 ease-out`}>
                     <FaFacebookF />
                 </div>
             </Link>
             <Link href={""}>
-                <div className="shadow shadow-yellow-500 hover:shadow-white border-dotted border-2 text-yellow-400 border-yellow-400 hover:border-white hover:text-white p-2 rounded-full transition duration-300 ease-out">
+                <div className={`${theme === "dark" ? "text-yellow-400 shadow-yellow-500 hover:shadow-white border-yellow-400 hover:border-white hover:text-white " : "text-slate-950 hover:bg-yellow-400 border-slate-950"} shadow border-dotted border-2 p-3 rounded-full transition duration-300 ease-out`}>
                     <FaLinkedinIn />
 
                 </div>
             </Link>
             <Link href={""}>
-                <div className="shadow shadow-yellow-500 hover:shadow-white border-dotted border-2 text-yellow-400 border-yellow-400 hover:border-white hover:text-white p-2 rounded-full transition duration-300 ease-out">
+                <div className={`${theme === "dark" ? "text-yellow-400 shadow-yellow-500 hover:shadow-white border-yellow-400 hover:border-white hover:text-white " : "text-slate-950 hover:bg-yellow-400 border-slate-950"} shadow border-dotted border-2 p-3 rounded-full transition duration-300 ease-out`}>
                     <TbBrandGithubFilled />
                 </div>
             </Link>
             <Link href={""}>
-                <div className="shadow shadow-yellow-500 hover:shadow-white border-dotted border-2 text-yellow-400 border-yellow-400 hover:border-white hover:text-white p-2 rounded-full transition duration-300 ease-out">
+                <div className={`${theme === "dark" ? "text-yellow-400 shadow-yellow-500 hover:shadow-white border-yellow-400 hover:border-white hover:text-white " : "text-slate-950 hover:bg-yellow-400 border-slate-950"} shadow border-dotted border-2 p-3 rounded-full transition duration-300 ease-out`}>
                     <IoMdMail />
                 </div>
             </Link>

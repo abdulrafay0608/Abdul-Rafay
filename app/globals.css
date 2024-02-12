@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,6 +14,25 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+} */
+
+body::-webkit-scrollbar {
+  /* height: 4px; */
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  /* border-radius: 20px; */
+  margin: 0px 6px;
+  scroll-behavior: smooth;
+  background-color: rgb(15 23 42);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(148 163 184);
+  width: 10px;
+  height: 60px;
+  border-radius: 20px;
 }
 
 /* .light {
@@ -54,7 +73,7 @@
   position: relative;
   height: 300px;
   overflow: hidden;
-  box-shadow: 0 1px 17px 0 rgba(0, 0, 0, 0.75);
+  /* box-shadow: 0 1px 17px 0 rgba(0, 0, 0, 0.75); */
 }
 
 
@@ -92,9 +111,9 @@
   display: block;
 } */
 
-.scroll-item:hover{
+.scroll-item:hover {
   background-position: bottom;
- 
+
 }
 
 /* .scroll-list {
@@ -146,4 +165,3 @@
     margin: 3rem 0;
   }
 } */
-
