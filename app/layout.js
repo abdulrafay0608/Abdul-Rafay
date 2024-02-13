@@ -1,8 +1,6 @@
 
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import ThemeProvider from "@/context/ThemeProvider";
 import Head from "next/head";
 
@@ -18,16 +16,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <link rel="icon"  href="/vercel.svg" />
+        <link rel="icon" href="/assets/ARlogo.png" />
       </Head>
       <body className={inter.className}>
         <ThemeProvider >
-          <Navbar />
-          
           {children}
-          <Footer />
         </ThemeProvider>
-
       </body>
     </html>
   );

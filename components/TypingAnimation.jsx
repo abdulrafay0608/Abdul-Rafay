@@ -13,19 +13,10 @@ const TypingAnimation = () => {
                 delay: 100,
             });
             typewriter
-                .pauseFor(500)
-                .typeString('Front-End Developer|')
-                .pause(1000)
-                .deleteAll()
-                .typeString('Web Developer|')
-                .pause(1000)
-                .deleteAll()
-                .typeString('App Developer|')
-                .pause(1000)
-                .deleteAll()
-                .typeString('Freelancer|')
-                .pause(1000)
-                .deleteAll()
+                .pauseFor(500).typeString('Front-End Developer|').pause(1000).deleteAll()
+                .typeString('Web Developer|').pause(1000).deleteAll()
+                .typeString('App Developer|').pause(1000).deleteAll()
+                .typeString('Freelancer|').pause(1000).deleteAll()
                 .start();
         }
     }, []);

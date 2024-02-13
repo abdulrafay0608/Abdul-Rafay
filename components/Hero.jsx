@@ -8,7 +8,7 @@ import { ThemeContext } from "@/context/ThemeProvider";
 const Hero = () => {
     const { theme } = useContext(ThemeContext)
     return (
-        <section className='relative md:h-screen' id='home'>
+        <main className='relative md:h-screen' id='home'>
 
             <div className='relative flex flex-col-reverse md:flex-row justify-around items-center h-[85vh]'>
 
@@ -37,7 +37,7 @@ const Hero = () => {
                 </div>
             </div>
 
-        </section>
+        </main>
 
     )
 }
