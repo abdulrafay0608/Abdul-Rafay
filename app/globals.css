@@ -77,9 +77,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-.scroll-item:nth-child(1) {
-  background: url(/assets/web1.png);
+.first-scroll-item {
+  background: url(/assets/amazone.png);
   background-size: cover;
+  height: 300px !important;
   background-position: top;
   opacity: 60%;
   border: 2px solid #ccc;
@@ -87,6 +88,55 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
   transition: all 1s ease;
 }
+
+.second-scroll-item {
+  background: url(/assets/blog.png);
+  background-size: cover;
+  height: 300px !important;
+  background-position: top;
+  opacity: 60%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
+.third-scroll-item {
+  background: url(/assets/human.jpg);
+  background-size: cover;
+  height: 300px !important;
+  background-position: top;
+  opacity: 60%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
+
+.fourth-scroll-item {
+  background: url(/assets/todo.png);
+  background-size: cover;
+  height: 300px !important;
+  background-position: top;
+  opacity: 60%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
+/* .second-scroll-item {
+  background: url(/assets/blog.png);
+  background-size: cover;
+  height: 300px !important;
+  background-position: top;
+  opacity: 60%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 1s ease;
+} */
 
 /* .scroll-item:nth-child(2) {
   background: url(/assets/web2.png);
@@ -102,16 +152,17 @@ body::-webkit-scrollbar-thumb {
   transition: all 1s ease;
 } */
 
-.scroll-item:hover .magic-text {
-  display: none;
-}
+
 
 /* .scroll-item img {
   width: 100%;
   display: block;
 } */
 
-.scroll-item:hover {
+.first-scroll-item:hover,
+.second-scroll-item:hover,
+.third-scroll-item:hover,
+.fourth-scroll-item:hover {
   background-position: bottom;
 
 }

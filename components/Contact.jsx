@@ -102,7 +102,7 @@ const Contact = () => {
 
                     <div className="my-6 mx-2 ">
 
-                        <Link href={"/"}>
+                        <Link target='_blank' href={"mailto:abdulrafay0608@gmail.com"}>
                             <div className={`${theme === "dark" ? "bg-slate-900 border-slate-400" : "border-slate-900 bg-gray-100"} flex justify-start items-center border-double border-4 rounded-lg py-3 my-4`}>
                                 <div className={`${theme === "dark" ? "text-yellow-500 border-yellow-500" : "text-slate-900 border-slate-900"} text-lg md:text-xl w-min border-double border-4  p-3 rounded-full mx-2 md:mx-4`}>
                                     <TfiEmail />
@@ -114,7 +114,7 @@ const Contact = () => {
                             </div>
                         </Link>
 
-                        <Link href={"/"}>
+                        <Link href={"tel:03160025477"}>
                             <div className={`${theme === "dark" ? "bg-slate-900 border-slate-400" : "border-slate-900 bg-gray-100"} flex justify-start items-center border-double border-4 rounded-lg py-3 my-4`}>
                                 <div className={`${theme === "dark" ? "text-yellow-500 border-yellow-500" : "text-slate-900 border-slate-900"} text-lg md:text-xl w-min border-double border-4  p-3 rounded-full mx-2 md:mx-4`}>
                                     <FaPhoneAlt />
@@ -126,7 +126,7 @@ const Contact = () => {
                             </div>
                         </Link>
 
-                        <Link href={"/"}>
+                        <Link target='_blank' href={"https://www.linkedin.com/in/abdulrafay0608/"}>
                             <div className={`${theme === "dark" ? "bg-slate-900 border-slate-400" : "border-slate-900 bg-gray-100"} flex justify-start items-center border-double border-4 rounded-lg py-3 my-4`}>
                                 <div className={`${theme === "dark" ? "text-yellow-500 border-yellow-500" : "text-slate-900 border-slate-900"} text-lg md:text-xl w-min border-double border-4  p-3 rounded-full mx-2 md:mx-4`}>
                                     <FaLinkedinIn />
@@ -138,7 +138,7 @@ const Contact = () => {
                             </div>
                         </Link>
 
-                        <Link href={"/"}>
+                        <Link target='_blank' href={""}>
                             <div className={`${theme === "dark" ? "bg-slate-900 border-slate-400" : "border-slate-900 bg-gray-100"} flex justify-start items-center border-double border-4 rounded-lg py-3 my-4`}>
                                 <div className={`${theme === "dark" ? "text-yellow-500 border-yellow-500" : "text-slate-900 border-slate-900"} text-lg md:text-xl w-min border-double border-4  p-3 rounded-full mx-2 md:mx-4`}>
                                     <CiLocationOn />

@@ -5,6 +5,7 @@ import React, { useContext } from 'react'
 import SocialIcon from './SocialIcon'
 import TypingAnimation from './TypingAnimation'
 import { ThemeContext } from "@/context/ThemeProvider";
+import Link from 'next/link'
 const Hero = () => {
     const { theme } = useContext(ThemeContext)
     return (
@@ -25,8 +26,12 @@ const Hero = () => {
                     <p className='md:w-[500px] font-bold'>&quot;Passionate Frontend Developer | Crafting Digital Experiences&quot;
                     </p>
                     <div className='my-5'>
-                        <button className={`${theme === 'dark' ? "border-yellow-400 hover:border-white hover:shadow-yellow-400 shadow-white" : "border-slate-950 bg-yellow-400 hover:bg-transparent"} border-double border-4 rounded-md py-1 px-3 mr-5 font-bold transition duration-300 ease-out hover:ease-in hover:shadow-md shadow`}>Hire me</button>
-                        <button className={`${theme === "dark" ? "bg-yellow-400 text-slate-900 shadow-slate-400 hover:text-white hover:shadow-slate-400 hover:bg-transparent hover:border-yellow-400 border-white " : "hover:border-slate-950 bg-transparent hover:bg-yellow-400 text-slate-900 shadow-slate-400 hover:shadow-slate-400 hover:bg-transparent border-slate-950 "} border-double border-4 rounded-md py-1 px-3 mr-5 font-bold transition duration-300 ease-out hover:ease-in hover:shadow-md shadow`}>Resume</button>
+                        <Link href={"#contact"} >
+                            <button className={`${theme === 'dark' ? "border-yellow-400 hover:border-white hover:shadow-yellow-400 shadow-white" : "border-slate-950 bg-yellow-400 hover:bg-transparent"} border-double border-4 rounded-md py-1 px-3 mr-5 font-bold transition duration-300 ease-out hover:ease-in hover:shadow-md shadow`}>Hire me</button>
+                        </Link>
+                        <Link href={""}>
+                            <button className={`${theme === "dark" ? "bg-yellow-400 text-slate-900 shadow-slate-400 hover:text-white hover:shadow-slate-400 hover:bg-transparent hover:border-yellow-400 border-white " : "hover:border-slate-950 bg-transparent hover:bg-yellow-400 text-slate-900 shadow-slate-400 hover:shadow-slate-400 hover:bg-transparent border-slate-950 "} border-double border-4 rounded-md py-1 px-3 mr-5 font-bold transition duration-300 ease-out hover:ease-in hover:shadow-md shadow`}>Resume</button>
+                        </Link>
                     </div>
                     <div className='md:absolute -bottom-28 mt-8'>
                         <SocialIcon />

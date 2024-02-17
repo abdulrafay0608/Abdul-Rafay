@@ -11,6 +11,7 @@ import Services from "@/components/Services";
 import Skills from "@/components/Skills";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { FaArrowAltCircleUp } from "react-icons/fa";
 
 export default function Home() {
 
@@ -30,7 +31,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 3000);
 
     window.addEventListener("scroll", controlNavbar);
     return () => {
@@ -44,11 +45,11 @@ export default function Home() {
     <>
       {loading ? <Loader /> :
         <div className="relative">
-          <div className={`sticky z-50 animate-bounce  top-[92vh] mx-2 md:mx-8 text-right text-white text-2xl transition-all duration-300  ${isOpen}`}>
-            <Link className="bg-slate-700 hover:bg-slate-800 p-3 rounded-full " id="home" href={""}>
-              ⏏
+          {/* <div className={`sticky z-50 top-[90vh] mx-2 md:mx-8 text-white text-2xl transition-all duration-300 ${isOpen}`} >
+            <Link id="home" href={""} className="bg-slate-700 hover:bg-slate-800 p-2">
+              <FaArrowAltCircleUp color="#fff"  />
             </Link>
-          </div>
+          </div> */}
           <Navbar />
           <Hero />
           <About />
