@@ -13,11 +13,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [show, setShow] = useState("translate-y-0");
   const [lastScrollY, setLastScrollY] = useState(0);
- 
+
 
   const controlNavbar = () => {
     if (window.scrollY > 200) {
-      if (window.scrollY > lastScrollY && !isOpen ) {
+      if (window.scrollY > lastScrollY && !isOpen) {
         setShow("-translate-y-[60px]");
       } else {
         setShow("shadow-sm");
@@ -34,7 +34,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", controlNavbar);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, controlNavbar]);
 
 
 

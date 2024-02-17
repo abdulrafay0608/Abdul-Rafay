@@ -28,7 +28,7 @@ const Project = () => {
                     <div className="text-container">
                         <h2 className="text-center text-2xl font-extrabold my-4 text-white">Amazone Clone</h2>
                         <p className='md:mx-6 text-center text-slate-300'>
-                            Recreated an Amazon-like e-commerce platform using HTML and CSS to enhance front-end skills and display proficiency in building visually appealing.
+                            Recreated an Amazon e-commerce platform using HTML and CSS to enhance front-end skills and display proficiency in building visually appealing.
                         </p>
                         <div className='flex justify-center items-center my-3 gap-2'>
                             <div className='bg-slate-950 border-4 border-double border-yellow-400 text-white font-bold py-1 px-2 rounded-md '>
@@ -111,7 +111,7 @@ const Project = () => {
                     <div className="text-container">
                         <h2 className="text-center text-2xl font-extrabold my-4 text-white">Human-Generated Prompts</h2>
                         <p className='md:mx-6 text-center text-slate-300'>
-                            An innovative platform that generates prompts tailored to users' search intent, powered by Next.js, Node.js, MongoDB, and Express for a seamless
+                            An innovative platform that generates prompts tailored to users&apos; search intent, powered by Next.js, Node.js, MongoDB, and Express for a seamless
                         </p>
                         <div className='flex justify-center items-center my-3 gap-2'>
                             <div className='bg-slate-950 border-4 border-double border-yellow-400 text-white font-bold py-1 px-2 rounded-md '>
