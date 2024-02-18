@@ -34,7 +34,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", controlNavbar);
     };
-  }, [lastScrollY, controlNavbar]);
+  }, [lastScrollY]);
 
 
 
