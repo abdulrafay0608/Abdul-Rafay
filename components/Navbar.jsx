@@ -39,8 +39,8 @@ const Navbar = () => {
 
 
   return (
-    <header>
-      <nav className={`${theme === "dark" ? "bg-slate-900  border-b-slate-500 " : "bg-gray-100 border-b-slate-300 "} border-x-0 border-t-0 border flex items-center justify-around h-[64px] px-4 md:p-8 z-50 sticky top-0 transition-transform duration-300 ${show}`}>
+   
+      <header className={`${theme === "dark" ? "bg-slate-900  border-b-slate-500 " : "bg-gray-100 border-b-slate-300 "} border-x-0 border-t-0 border flex items-center justify-around h-[64px] px-4 md:p-8 z-50 sticky top-0 transition-transform duration-300 ${show}`}>
         <div>
           <div className="">
             <Image height={150} width={150} src={`${theme == "dark" ? "/assets/logodark.png" : "/assets/logolight.png"}`} alt="logo" />
@@ -58,7 +58,7 @@ const Navbar = () => {
         </div>
 
         {/* Navigation links for larger screens */}
-        <div className="hidden md:flex items-center gap-5">
+        <nav className="hidden md:flex items-center gap-5">
           {NavMenu.map((menu, index) => (
             <Link
               key={index}
@@ -70,7 +70,7 @@ const Navbar = () => {
               <span>{menu.title}</span>
             </Link>
           ))}
-        </div>
+        </nav>
 
         {/* Dark and Light mode icons */}
         <div onClick={theme == "dark" ? LightMode : DarkMode} className="flex items-center justify-center h-6 w-6 text-white transition-all duration-1000 ease-in-out	">
@@ -94,7 +94,7 @@ const Navbar = () => {
 
         {/* Responsive menu for smaller screens */}
         {isOpen && (
-          <div className={`${theme === "dark" ? "bg-slate-900" : "bg-slate-100"}  md:hidden fixed top-16 left-0 w-9/12 h-screen p-3 transition-transform duration-300 `}>
+          <nav className={`${theme === "dark" ? "bg-slate-900" : "bg-slate-100"}  md:hidden fixed top-16 left-0 w-9/12 h-screen p-3 transition-transform duration-300 `}>
             {NavMenu.map((menu, index) => (
               <Link
                 key={index}
@@ -106,10 +106,10 @@ const Navbar = () => {
                 <span className="ml-2">{menu.title}</span>
               </Link>
             ))}
-          </div>
+          </nav>
         )}
-      </nav>
-    </header>
+      </header>
+  
   );
 };
 
