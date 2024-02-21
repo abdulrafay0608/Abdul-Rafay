@@ -9,15 +9,9 @@ import Link from 'next/link'
 const Hero = () => {
     const { theme } = useContext(ThemeContext)
     return (
-        <main className='relative md:h-screen' id='home'>
+        <main className='relative py-8 md:pb-16' id='home'>
 
-            <div className='relative flex flex-col-reverse md:flex-row justify-around items-center h-[85vh]'>
-
-                <div className={`absolute rounded-md rotate-180 animate-ping transition-all duration-1000 h-20 w-20 md:h-40 md:w-40 border-4 border-double ${theme === "dark" ? "border-yellow-300" : "border-yellow-600"}`}></div>
-                <div className='absolute rounded-md rotate-45 animate-ping transition-all duration-1000 h-20 w-20 md:h-40 md:w-40 border-4 border-double border-yellow-300'></div>
-                <div className='absolute rounded rotate-180 animate-ping transition-all duration-1000 h-10 w-10 md:h-20 md:w-20 border-4 border-double border-yellow-300'></div>
-                <div className='absolute rounded rotate-45 animate-ping transition-all duration-1000 h-10 w-10 md:h-20 md:w-20 border-4 border-double border-yellow-300'></div>
-
+            <div className='relative flex flex-col-reverse md:flex-row justify-around items-center'>
 
                 <div className='bg-black/20 p-4 md:bg-transparent md:p-0 absolute mx-3 md:mx-0 md:relative '>
                     <h3 className='font-bold text-base md:text-2xl '>Welcome to My Corner of the Web!</h3>
@@ -37,6 +31,7 @@ const Hero = () => {
                         <SocialIcon />
                     </div>
                 </div>
+
                 <div className=''>
                     <Image className='' src={"/assets/profile.png"} height={400} width={400} alt='my picture' />
                 </div>

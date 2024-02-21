@@ -19,9 +19,9 @@ const About = () => {
                 </div>
 
                 <div className='md:order-1 md:w-2/3 mx-3 py-2'>
-                    <h2 className='md:text-3xl text-2xl font-extrabold my-4'>I&apos;m <span className='text-yellow-500'>Abdul Rafay</span>  &amp; I&apos;m a <span className='text-yellow-500'>Front-End Developer</span> </h2>
+                    <h2 className='md:text-3xl text-2xl font-extrabold my-4'>I&apos;m <span className='text-yellow-500'>Abdul Rafay</span>  &amp; a <span className='text-yellow-500'>Front-End Developer</span> </h2>
                     <p className='text-justify md:max-w-[600px]'>
-                        I am a dedicated frontend developer with a passion for creating immersive web experiences. From translating designs into code to optimizing user interactions, I bring ideas to life in the digital realm.
+                        I am a dedicated front-end developer with a passion for creating immersive web experiences. From translating designs into code to optimizing user interactions, I bring ideas to life in the digital realm.
                     </p>
                     <table className="my-6">
                         <tbody>
@@ -39,6 +39,11 @@ const About = () => {
                                 <td className='w-28'>Address</td>
                                 <td className='w-4'>:</td>
                                 <td className='text-yellow-500'>Karachi, Pakistan</td>
+                            </tr>
+                            <tr>
+                                <td className='w-28'>Email</td>
+                                <td className='w-4'>:</td>
+                                <td className='text-yellow-500'>abdulrafay0608@gmail.com</td>
                             </tr>
                             <tr>
                                 <td className='w-28'>Phone no.</td>

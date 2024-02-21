@@ -2,27 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
 
 body::-webkit-scrollbar {
-  /* height: 4px; */
   width: 10px;
 }
 
 body::-webkit-scrollbar-track {
-  /* border-radius: 20px; */
   margin: 0px 6px;
   scroll-behavior: smooth;
   background-color: rgb(15 23 42);
@@ -35,47 +20,11 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
 }
 
-/* .light {
-  background-color: #fff;
-  color: "#000"
-}
-
-.Dark {
-  background-color: rgb(3, 3, 53);
-  color: "#fff"
-} */
-
-
-/* @layer base {
-  body {
-    @apply max-w-2xl mx-auto px-4 flex justify-center items-center;
-  }
-} */
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
-
-/* @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
-/* styles/globals.css or a new stylesheet */
-
-
 .scroll-item {
   position: relative;
   height: 300px;
   overflow: hidden;
-  /* box-shadow: 0 1px 17px 0 rgba(0, 0, 0, 0.75); */
 }
-
 
 .first-scroll-item {
   background: url(/assets/amazone.png);
@@ -126,8 +75,8 @@ body::-webkit-scrollbar-thumb {
   transition: all 1s ease;
 }
 
-/* .second-scroll-item {
-  background: url(/assets/blog.png);
+.fifth-scroll-item {
+  background: url(/assets/shoes.png);
   background-size: cover;
   height: 300px !important;
   background-position: top;
@@ -136,83 +85,12 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   overflow: hidden;
   transition: all 1s ease;
-} */
-
-/* .scroll-item:nth-child(2) {
-  background: url(/assets/web2.png);
-  background-size: cover;
-  background-position: top;
-  transition: all 1s ease;
 }
-
-.scroll-item:nth-child(3) {
-  background: url(/assets/web3.png);
-  background-size: cover;
-  background-position: top;
-  transition: all 1s ease;
-} */
-
-
-
-/* .scroll-item img {
-  width: 100%;
-  display: block;
-} */
 
 .first-scroll-item:hover,
 .second-scroll-item:hover,
 .third-scroll-item:hover,
-.fourth-scroll-item:hover {
+.fourth-scroll-item:hover,
+.fifth-scroll-item:hover {
   background-position: bottom;
-
 }
-
-/* .scroll-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: flex-start;
-  gap: 2rem;
-  margin: 3rem;
-} */
-
-/* .text-container {
-  background-color: #fff;
-  color: #000;
-  font-weight: bolder;
-  width: max-content;
-  box-shadow: 0 1px 5px 4px #000;
-  padding: 0.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: bottom 0.3s ease;
-} */
-
-/* .text button{
-  margin: 0 1rem;
-  border: none;
-  background-color: transparent;
-  font-size: 1.2rem;
-  color: #fff;
-  cursor: pointer;
-} */
-
-/* .scroll-item:hover .text-container {
-  display: none;
-}
-
-
-
-@media screen and (max-width: 992px) {
-  .scroll-list {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 3rem 0;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .scroll-list {
-    grid-template-columns: repeat(1, 1fr);
-    margin: 3rem 0;
-  }
-} */
