@@ -9,7 +9,7 @@ const About = () => {
     return (
         <main className={`${theme === "dark" ? "bg-slate-900" : ""} relative py-12 md:p-12`} id='about'>
 
-            <h2 className="text-center text-5xl font-extrabold p-0 ">About us</h2>
+            <h2 className="text-center text-5xl font-extrabold p-0 ">About Me</h2>
             <p className="text-center font-mono pb-8">&quot;Turning Ideas into Interactive Experiences&quot;</p>
 
             <div className='flex flex-col md:flex-row justify-evenly items-center md:mx-16'>
@@ -33,7 +33,7 @@ const About = () => {
                             <tr>
                                 <td className='w-28'>Date Of Birth</td>
                                 <td className='w-4'>:</td>
-                                <td className='text-yellow-500'>August 06, 2033</td>
+                                <td className='text-yellow-500'>August 06, 2003</td>
                             </tr>
                             <tr>
                                 <td className='w-28'>Address</td>

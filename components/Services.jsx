@@ -22,9 +22,9 @@ const Services = () => {
                                 <FaLaptopCode />
                             </div>
                             <div className="flex-grow">
-                                <h2 className="text-yellow-500 text-lg md:text-xl font-bold mb-3">Front-End Developing</h2>
+                                <h2 className="text-yellow-500 text-lg md:text-xl font-bold mb-3">Front-End Development</h2>
                                 <p className="leading-relaxed text-sm">
-                                    As a Front-End Website Developer, I turn creative designs into functional and visually appealing websites. My focus is on creating user-friendly experiences, ensuring that your online presence leaves a lasting impression.
+                                    I am a Front-End Website Developer, I turn creative designs into functional and visually appealing websites. My focus is on creating user-friendly experiences, ensuring that your online presence leaves a lasting impression.
                                 </p>
                             </div>
                         </div>
@@ -34,7 +34,7 @@ const Services = () => {
                                 <CgWebsite />
                             </div>
                             <div className="flex-grow">
-                                <h2 className="text-yellow-500 text-lg md:text-xl font-bold mb-3">Web Developing</h2>
+                                <h2 className="text-yellow-500 text-lg md:text-xl font-bold mb-3">Web Development</h2>
                                 <p className="leading-relaxed text-sm">
                                     I am a Web Developer dedicated to transforming ideas into fully functional websites. With a commitment to staying updated on the latest technologies, I bring a blend of creativity and technical expertise to deliver websites that stand out in the digital landscape.
                                 </p>
@@ -46,7 +46,7 @@ const Services = () => {
                             <CiMobile3 />
                             </div>
                             <div className="flex-grow">
-                                <h2 className="text-yellow-500 text-lg md:text-xl font-bold mb-3">Front-End App Developing</h2>
+                                <h2 className="text-yellow-500 text-lg md:text-xl font-bold mb-3">Mobile App Development</h2>
                                 <p className="leading-relaxed text-sm">
                                     Specializing in Front-End App Development, I create apps with a focus on user experience. My goal is to deliver applications that are not only visually appealing but also intuitive and responsive, providing users with a seamless and enjoyable interaction.
                                 </p>

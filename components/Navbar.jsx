@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
    
-      <header className={`${theme === "dark" ? "bg-slate-900  border-b-slate-500 " : "bg-gray-100 border-b-slate-300 "} border-x-0 border-t-0 border flex items-center justify-around h-[64px] px-4 md:p-8 z-50 sticky top-0 transition-transform duration-300 ${show}`}>
+      <header className={`${theme === "dark" ? "bg-slate-900  border-b-slate-500 " : "bg-gray-100 border-b-slate-300 "} border-x-0 border-t-0 border flex items-center justify-around h-[64px] px-4 md:p-8 z-50 sticky top-0 transition-transform duration-1000 ease-in-out delay-200  ${show}`}>
         <div>
           <div className="">
             <Image height={150} width={150} src={`${theme == "dark" ? "/assets/logodark.png" : "/assets/logolight.png"}`} alt="logo" />
