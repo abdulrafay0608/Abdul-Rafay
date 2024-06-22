@@ -31,12 +31,13 @@ const Project = () => {
 
           <div className="text-container">
             <h2 className="text-center text-2xl font-extrabold my-4 text-white">
-              Sid Cup Family Golf Clone
+            Sidcup Family Golf Clone
             </h2>
             <p className="md:mx-6 text-center text-slate-300">
-              In this project, I recreated the landing page for Sundown Studio,
-              a design studio. This clone replicates the design and interactive
-              features of the original website using HTML, CSS, and JavaScript.
+              In this project, I recreated the engaging landing page for Sidcup
+              Family Golf, a multi-purpose golf facility in London. Using HTML,
+              CSS, and JavaScript, I faithfully replicated the original design
+              and interactive elements.
             </p>
             <div className="flex justify-center items-center my-3 gap-2">
               <div className="bg-slate-950 border-4 border-double border-yellow-400 text-white font-bold py-1 px-2 rounded-md ">
