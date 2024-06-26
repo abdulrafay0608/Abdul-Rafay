@@ -22,7 +22,7 @@ const Project = () => {
         <div className="grid md:grid-cols-2 grid-flow-col-1 justify-center items-center bg-slate-900 hover:bg-slate-950 transition-all p-4 border-4 border-double my-12 border-yellow-400 mx-2 md:mx-20">
           <div className="text-container">
             <h2 className="text-center text-2xl font-extrabold my-4 text-white">
-              Sundown Studio Clone
+             Pass Protector
             </h2>
             <p className="md:mx-6 text-center text-slate-300">
               PassProtector is an innovative application designed to securely
@@ -34,7 +34,7 @@ const Project = () => {
             </p>
             <div className="flex justify-center items-center my-3 gap-2">
               <div className="bg-slate-950 border-4 border-double border-yellow-400 text-white font-bold py-1 px-2 rounded-md ">
-                React (Vite.js)
+                React + Vite.js
               </div>
               <div className="bg-slate-950 border-4 border-double border-yellow-400 text-white font-bold py-1 px-2 rounded-md">
                 Tailwind Css
@@ -210,7 +210,7 @@ const Project = () => {
                 CSS
               </div>
               <div className="bg-slate-950 border-4 border-double border-yellow-400 text-white font-bold py-1 px-2 rounded-md">
-                JS
+                JavaScript
               </div>
             </div>
             <div className="flex justify-center items-center gap-2 my-4">
