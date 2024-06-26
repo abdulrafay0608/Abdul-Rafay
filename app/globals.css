@@ -29,6 +29,18 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
+.minus0ne-scroll-item {
+  background: url(/assets/passprotector.png);
+  background-size: cover;
+  height: 300px !important;
+  background-position: top;
+  opacity: 60%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
 .zero-scroll-item {
   background: url(/assets/sidcupfamilygolf.png);
   background-size: cover;
@@ -121,6 +133,7 @@ body::-webkit-scrollbar-thumb {
   transform: translate(-50%, -50%);
 } */
 
+.minus0ne-scroll-item:hover,
 .zero-scroll-item:hover,
 .first-scroll-item:hover,
 .second-scroll-item:hover,

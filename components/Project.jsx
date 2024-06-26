@@ -20,6 +20,62 @@ const Project = () => {
         </p>
 
         <div className="grid md:grid-cols-2 grid-flow-col-1 justify-center items-center bg-slate-900 hover:bg-slate-950 transition-all p-4 border-4 border-double my-12 border-yellow-400 mx-2 md:mx-20">
+          <div className="text-container">
+            <h2 className="text-center text-2xl font-extrabold my-4 text-white">
+              Sundown Studio Clone
+            </h2>
+            <p className="md:mx-6 text-center text-slate-300">
+              PassProtector is an innovative application designed to securely
+              store user credentials, helping users manage and protect their
+              usernames and passwords. Given the frequent issue of users
+              forgetting their login details after signing up on various
+              websites and apps, passprotector offers a reliable solution to
+              this problem.
+            </p>
+            <div className="flex justify-center items-center my-3 gap-2">
+              <div className="bg-slate-950 border-4 border-double border-yellow-400 text-white font-bold py-1 px-2 rounded-md ">
+                React (Vite.js)
+              </div>
+              <div className="bg-slate-950 border-4 border-double border-yellow-400 text-white font-bold py-1 px-2 rounded-md">
+                Tailwind Css
+              </div>
+              <div className="bg-slate-950 border-4 border-double border-yellow-400 text-white font-bold py-1 px-2 rounded-md">
+                Local Storage
+              </div>
+            </div>
+            <div className="flex justify-center items-center gap-2 my-4">
+              <Link
+                target="_blank"
+                href={"https://https://passprotector.vercel.app"}
+              >
+                <div className="flex justify-center items-center gap-2 text-sm shadow shadow-yellow-500 hover:shadow-white border-dotted border-2 text-yellow-400 border-yellow-400 hover:border-white hover:text-white p-2 rounded-md transition duration-300 ease-out">
+                  <p>Live Demo </p>
+                  <RiLiveFill />
+                </div>
+              </Link>
+              <Link
+                target="_blank"
+                href={"https://github.com/abdulrafay0608/Password-Manager"}
+              >
+                <div className="flex justify-center items-center gap-2 text-sm shadow shadow-yellow-500 hover:shadow-white border-dotted border-2 text-yellow-400 border-yellow-400 hover:border-white hover:text-white p-2 rounded-md transition duration-300 ease-out">
+                  <p>Code </p>
+                  <FaGithub />
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="minus0ne-scroll-item"></div>
+            <div className="magic-text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-3 rounded-md shadow-sm shadow-white">
+              <p className="text-black font-bold">
+                Hover here to see Majic 💥💫
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 grid-flow-col-1 justify-center items-center bg-slate-900 hover:bg-slate-950 transition-all p-4 border-4 border-double my-12 border-yellow-400 mx-2 md:mx-20">
           <div className="relative">
             <div className="zero-scroll-item"></div>
             <div className="magic-text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-3 rounded-md shadow-sm shadow-white">
@@ -31,7 +87,7 @@ const Project = () => {
 
           <div className="text-container">
             <h2 className="text-center text-2xl font-extrabold my-4 text-white">
-            Sidcup Family Golf Clone
+              Sidcup Family Golf Clone
             </h2>
             <p className="md:mx-6 text-center text-slate-300">
               In this project, I recreated the engaging landing page for Sidcup
