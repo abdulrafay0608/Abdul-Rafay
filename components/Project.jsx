@@ -46,7 +46,7 @@ const Project = () => {
             <div className="flex justify-center items-center gap-2 my-4">
               <Link
                 target="_blank"
-                href={"https://https://passprotector.vercel.app"}
+                href={"https://rafay-passprotector.vercel.app/"}
               >
                 <div className="flex justify-center items-center gap-2 text-sm shadow shadow-yellow-500 hover:shadow-white border-dotted border-2 text-yellow-400 border-yellow-400 hover:border-white hover:text-white p-2 rounded-md transition duration-300 ease-out">
                   <p>Live Demo </p>
