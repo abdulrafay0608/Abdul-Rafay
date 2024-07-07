@@ -16,7 +16,7 @@ const Project = () => {
     <section >
       <div className="flex justify-center items-center lg:my-0 my-10">
         {/* <SwiperCard /> */}
-        <div className="text-5xl font-[900]">
+        <div className="h-[60vh] md:text-3xl text-5xl font-[900]">
           Project Upload Soon
         </div>
       </div>
