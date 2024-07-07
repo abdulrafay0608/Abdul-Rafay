@@ -56,10 +56,9 @@ body::-webkit-scrollbar-thumb {
   color: #222;
 }
 
+
 .hero-img {
-  width: 100%;
-  height: 100%;
-  /* mix-blend-mode: screen; */
+  /* mix-blend-mode: luminosity; */
   filter: drop-shadow(0px 0px 5px orange);
 }
 
@@ -73,7 +72,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-.about-img img {
+.about-img .img {
   mix-blend-mode: luminosity;
   position: absolute;
   height: 100%;
@@ -81,11 +80,11 @@ body::-webkit-scrollbar-thumb {
   top: -4%;
   left: -4%;
   background: linear-gradient(to top right, #1d1f18, #03045e);
-  border-radius: 15px;
+  border-radius: 12px;
   transition: all 0.3s ease-in;
 }
 
-.about-img img:hover {
+.about-img .img:hover {
   mix-blend-mode: normal;
   background: linear-gradient(to top left, #1d1f18, #03045e);
   top: -8%;
@@ -165,14 +164,6 @@ body::-webkit-scrollbar-thumb {
     animation: move 5s ease-in-out;
   }
 }
-
-
-
-
-
-
-
-
 
 
 

@@ -1,16 +1,12 @@
 "use client";
-
-import { ThemeContext } from "@/context/ThemeProvider";
 import Link from "next/link";
-import React, { useContext } from "react";
+import React from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { TbBrandGithubFilled } from "react-icons/tb";
 
 const SocialIcon = () => {
-  const { theme } = useContext(ThemeContext);
-
   return (
     <div className="flex items-center gap-4">
       <Link target="_blank" href={"https://www.facebook.com/abdulrafay0608"}>

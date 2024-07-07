@@ -3,18 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import React, { useContext, useRef } from "react";
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { TfiEmail } from "react-icons/tfi";
-import { FaPhoneAlt } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa6";
-import { CiLocationOn } from "react-icons/ci";
 import { useRouter } from "next/navigation";
-import { ThemeContext } from "@/context/ThemeProvider";
 import DarkButton from "@/ui-component/DarkButton";
 
 const Contact = () => {
-  const { theme } = useContext(ThemeContext);
   const route = useRouter();
   const form = useRef();
 
@@ -104,10 +98,12 @@ const Contact = () => {
         </div>
 
         <div className="hidden lg:block">
-          <img
-            src="asset/pi.png"
+          <Image
+            width={500}
+            height={500}
+            src="/asset/pi.png"
             className="max-h-[500px] max-w-[500px]"
-            alt=""
+            alt="contact"
           />
         </div>
       </div>

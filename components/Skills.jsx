@@ -1,12 +1,8 @@
-import Image from "next/image";
-import React, { useContext } from "react";
-import SkillBar from "./SkillsIcon";
-import { ThemeContext } from "@/context/ThemeProvider";
+import React from "react";
 import Capsule from "@/ui-component/Capsule";
 import SkillsIcon from "./SkillsIcon";
-// Learning is the compass that guides us; every acquired skill is a marker on the journey of continuous growth.
+
 const Skills = () => {
-  const { theme } = useContext(ThemeContext);
 
   return (
     <section >

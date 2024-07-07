@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const skills = [
@@ -22,18 +23,14 @@ const SkillsIcon = () => {
             <li
               key={i}
               className="flex md:mx-8 justify-center gap-4 text-center items-center flex-col cursor-pointer"
-              style={{
-                opacity: 1,
-                transform: "translateY(0px) translateZ(0px)",
-              }}
             >
               <div className="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px] bg-[#041622] rounded-full dark:rounded-none p-4">
-                <img
-                  alt={skill.skill_name}
+                <Image
+                  src={skill.skill_img}
                   width={100}
                   height={100}
                   className="invert w-full h-full"
-                  src={skill.skill_img}
+                  alt={skill.skill_name}
                 />
               </div>
               <span className="dark:text-neutral-400 text-sm text-neutral-800">

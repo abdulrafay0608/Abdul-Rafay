@@ -1,6 +1,6 @@
 "use client";
 import { MdDarkMode } from "react-icons/md";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavMenu } from "./NavMenu";
 import Link from "next/link";
 import { MdOutlineLightMode } from "react-icons/md";
@@ -58,7 +58,6 @@ const Navbar = () => {
                 : "text-slate-950 hover:text-slate-800"
             } text-sm font-light hover:underline`}
           >
-            {/* <span className="font-light text-[16px]">{menu.icon}</span> */}
             <span>{menu.title}</span>
           </Link>
         ))}
@@ -134,7 +133,6 @@ const Navbar = () => {
                   : "text-slate-950 hover:text-slate-800"
               } flex items-center hover:underline p-3 leading-10	`}
             >
-              {/* <span className="text-[16px]">{menu.icon}</span> */}
               <span className="ml-2">{menu.title}</span>
             </Link>
           ))}

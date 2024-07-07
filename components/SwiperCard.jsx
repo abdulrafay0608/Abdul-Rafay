@@ -11,6 +11,7 @@ import Button from "@/ui-component/Button";
 import DarkButton from "@/ui-component/DarkButton";
 import { ThemeContext } from "@/context/ThemeProvider";
 import SkillsCapsule from "@/ui-component/SkillsCapsule";
+import Image from "next/image";
 
 const projects = [
   {
@@ -91,7 +92,7 @@ export default function SwiperCard() {
   const { theme } = useContext(ThemeContext);
 
   const sliderRef = useRef(null);
-  
+
   const handlePrev = () => {
     if (sliderRef.current && sliderRef.current.swiper) {
       sliderRef.current.swiper.slidePrev();
@@ -147,7 +148,7 @@ export default function SwiperCard() {
               theme == "dark" ? "dark-main-swiper" : "light-main-swiper"
             }`}
           >
-            <div className="card h-full w-full p-2 ">
+            <div className="card h-[300px] w-[500px] p-2 ">
               <Swiper
                 pagination={false}
                 slidesPerView={1}
@@ -166,430 +167,37 @@ export default function SwiperCard() {
                 }""`}
               >
                 <SwiperSlide className="image-swiper">
-                  <img
+                  <Image
+                    width={440}
+                    height={440}
+                    // layout="fill"
                     className=""
-                    src="https://images.unsplash.com/photo-1720188228786-e6cb3b668aef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8"
+                    src="/asset/1.webp"
                     alt="todo"
                   />
                 </SwiperSlide>
                 <SwiperSlide className="image-swiper">
-                  <img
+                  <Image
+                    width={440}
+                    height={440}
+                    // layout="fill"
                     className=""
-                    src="https://media.istockphoto.com/id/1393796813/photo/friends-playing-computer-game.webp?b=1&s=170667a&w=0&k=20&c=bmQtz5S52PBUFC9f6KI23tBSktORQBRgQSedrNGsq0M="
+                    src="/asset/2.webp"
                     alt="pass"
                   />
                 </SwiperSlide>
                 <SwiperSlide className="image-swiper">
-                  <img
+                  <Image
+                    width={440}
+                    height={440}
+                    // layout="fill"
                     className=""
-                    src="https://media.istockphoto.com/id/1461320320/photo/female-video-game-designer-works-on-a-new-3d-level-on-personal-computer-focused-woman.webp?b=1&s=170667a&w=0&k=20&c=lJYTnHJRYJpsuYd4DRG1F5ApWewwYebnI7jEYdmG9aY="
+                    src="/asset/3.webp"
                     alt="human"
                   />
                 </SwiperSlide>
               </Swiper>
-              <div className="md:m-4">
-                <div>
-                  <SkillsCapsule skill={"HTML"} />
-                  <SkillsCapsule skill={"CSS"} />
-                  <SkillsCapsule skill={"JavaScript"} />
-                  <SkillsCapsule skill={"React js"} />
-                </div>
-                <h3 className="font-protest mt-5 mb-3 text-3xl">Todo App</h3>
-                <p className="text-sm tracking-wide">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Minima, aperiam minus rem beatae fuga mollitia commodi iste
-                  tempora corrupti quaerat nulla velit consectetur. Voluptates,
-                  consequuntur beatae. Labore temporibus esse distinctio!
-                </p>
-                <div className="sm:flex mt-5 gap-4">
-                  <DarkButton lable={"Live Dome"} />
-                  <DarkButton lable={"Code"} />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide
-            className={`${
-              theme == "dark" ? "dark-main-swiper" : "light-main-swiper"
-            }`}
-          >
-            <div className="card h-full w-full p-2 ">
-              <Swiper
-                pagination={false}
-                slidesPerView={1}
-                spaceBetween={30}
-                effect="fade"
-                fadeEffect={{ crossFade: true }}
-                autoplay={{
-                  delay: 2000,
-                  disableOnInteraction: false,
-                }}
-                loop={true}
-                allowTouchMove={false}
-                modules={[Pagination, Autoplay]}
-                className={`${
-                  theme === "dark" ? "dark-child-swiper" : "light-child-swiper"
-                }""`}
-              >
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://images.unsplash.com/photo-1720188228786-e6cb3b668aef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8"
-                    alt="todo"
-                  />
-                </SwiperSlide>
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://media.istockphoto.com/id/1393796813/photo/friends-playing-computer-game.webp?b=1&s=170667a&w=0&k=20&c=bmQtz5S52PBUFC9f6KI23tBSktORQBRgQSedrNGsq0M="
-                    alt="pass"
-                  />
-                </SwiperSlide>
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://media.istockphoto.com/id/1461320320/photo/female-video-game-designer-works-on-a-new-3d-level-on-personal-computer-focused-woman.webp?b=1&s=170667a&w=0&k=20&c=lJYTnHJRYJpsuYd4DRG1F5ApWewwYebnI7jEYdmG9aY="
-                    alt="human"
-                  />
-                </SwiperSlide>
-              </Swiper>
-              <div className="md:m-4">
-                <div>
-                  <SkillsCapsule skill={"HTML"} />
-                  <SkillsCapsule skill={"CSS"} />
-                  <SkillsCapsule skill={"JavaScript"} />
-                  <SkillsCapsule skill={"React js"} />
-                </div>
-                <h3 className="font-protest mt-5 mb-3 text-3xl">Todo App</h3>
-                <p className="text-sm tracking-wide">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Minima, aperiam minus rem beatae fuga mollitia commodi iste
-                  tempora corrupti quaerat nulla velit consectetur. Voluptates,
-                  consequuntur beatae. Labore temporibus esse distinctio!
-                </p>
-                <div className="sm:flex mt-5 gap-4">
-                  <DarkButton lable={"Live Dome"} />
-                  <DarkButton lable={"Code"} />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide
-            className={`${
-              theme == "dark" ? "dark-main-swiper" : "light-main-swiper"
-            }`}
-          >
-            <div className="card h-full w-full p-2 ">
-              <Swiper
-                pagination={false}
-                slidesPerView={1}
-                spaceBetween={30}
-                effect="fade"
-                fadeEffect={{ crossFade: true }}
-                autoplay={{
-                  delay: 2000,
-                  disableOnInteraction: false,
-                }}
-                loop={true}
-                allowTouchMove={false}
-                modules={[Pagination, Autoplay]}
-                className={`${
-                  theme === "dark" ? "dark-child-swiper" : "light-child-swiper"
-                }""`}
-              >
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://images.unsplash.com/photo-1720188228786-e6cb3b668aef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8"
-                    alt="todo"
-                  />
-                </SwiperSlide>
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://media.istockphoto.com/id/1393796813/photo/friends-playing-computer-game.webp?b=1&s=170667a&w=0&k=20&c=bmQtz5S52PBUFC9f6KI23tBSktORQBRgQSedrNGsq0M="
-                    alt="pass"
-                  />
-                </SwiperSlide>
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://media.istockphoto.com/id/1461320320/photo/female-video-game-designer-works-on-a-new-3d-level-on-personal-computer-focused-woman.webp?b=1&s=170667a&w=0&k=20&c=lJYTnHJRYJpsuYd4DRG1F5ApWewwYebnI7jEYdmG9aY="
-                    alt="human"
-                  />
-                </SwiperSlide>
-              </Swiper>
-              <div className="md:m-4">
-                <div>
-                  <SkillsCapsule skill={"HTML"} />
-                  <SkillsCapsule skill={"CSS"} />
-                  <SkillsCapsule skill={"JavaScript"} />
-                  <SkillsCapsule skill={"React js"} />
-                </div>
-                <h3 className="font-protest mt-5 mb-3 text-3xl">Todo App</h3>
-                <p className="text-sm tracking-wide">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Minima, aperiam minus rem beatae fuga mollitia commodi iste
-                  tempora corrupti quaerat nulla velit consectetur. Voluptates,
-                  consequuntur beatae. Labore temporibus esse distinctio!
-                </p>
-                <div className="sm:flex mt-5 gap-4">
-                  <DarkButton lable={"Live Dome"} />
-                  <DarkButton lable={"Code"} />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide
-            className={`${
-              theme == "dark" ? "dark-main-swiper" : "light-main-swiper"
-            }`}
-          >
-            <div className="card h-full w-full p-2 ">
-              <Swiper
-                pagination={false}
-                slidesPerView={1}
-                spaceBetween={30}
-                effect="fade"
-                fadeEffect={{ crossFade: true }}
-                autoplay={{
-                  delay: 2000,
-                  disableOnInteraction: false,
-                }}
-                loop={true}
-                allowTouchMove={false}
-                modules={[Pagination, Autoplay]}
-                className={`${
-                  theme === "dark" ? "dark-child-swiper" : "light-child-swiper"
-                }""`}
-              >
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://images.unsplash.com/photo-1720188228786-e6cb3b668aef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8"
-                    alt="todo"
-                  />
-                </SwiperSlide>
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://media.istockphoto.com/id/1393796813/photo/friends-playing-computer-game.webp?b=1&s=170667a&w=0&k=20&c=bmQtz5S52PBUFC9f6KI23tBSktORQBRgQSedrNGsq0M="
-                    alt="pass"
-                  />
-                </SwiperSlide>
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://media.istockphoto.com/id/1461320320/photo/female-video-game-designer-works-on-a-new-3d-level-on-personal-computer-focused-woman.webp?b=1&s=170667a&w=0&k=20&c=lJYTnHJRYJpsuYd4DRG1F5ApWewwYebnI7jEYdmG9aY="
-                    alt="human"
-                  />
-                </SwiperSlide>
-              </Swiper>
-              <div className="md:m-4">
-                <div>
-                  <SkillsCapsule skill={"HTML"} />
-                  <SkillsCapsule skill={"CSS"} />
-                  <SkillsCapsule skill={"JavaScript"} />
-                  <SkillsCapsule skill={"React js"} />
-                </div>
-                <h3 className="font-protest mt-5 mb-3 text-3xl">Todo App</h3>
-                <p className="text-sm tracking-wide">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Minima, aperiam minus rem beatae fuga mollitia commodi iste
-                  tempora corrupti quaerat nulla velit consectetur. Voluptates,
-                  consequuntur beatae. Labore temporibus esse distinctio!
-                </p>
-                <div className="sm:flex mt-5 gap-4">
-                  <DarkButton lable={"Live Dome"} />
-                  <DarkButton lable={"Code"} />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide
-            className={`${
-              theme == "dark" ? "dark-main-swiper" : "light-main-swiper"
-            }`}
-          >
-            <div className="card h-full w-full p-2 ">
-              <Swiper
-                pagination={false}
-                slidesPerView={1}
-                spaceBetween={30}
-                effect="fade"
-                fadeEffect={{ crossFade: true }}
-                autoplay={{
-                  delay: 2000,
-                  disableOnInteraction: false,
-                }}
-                loop={true}
-                allowTouchMove={false}
-                modules={[Pagination, Autoplay]}
-                className={`${
-                  theme === "dark" ? "dark-child-swiper" : "light-child-swiper"
-                }""`}
-              >
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://images.unsplash.com/photo-1720188228786-e6cb3b668aef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8"
-                    alt="todo"
-                  />
-                </SwiperSlide>
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://media.istockphoto.com/id/1393796813/photo/friends-playing-computer-game.webp?b=1&s=170667a&w=0&k=20&c=bmQtz5S52PBUFC9f6KI23tBSktORQBRgQSedrNGsq0M="
-                    alt="pass"
-                  />
-                </SwiperSlide>
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://media.istockphoto.com/id/1461320320/photo/female-video-game-designer-works-on-a-new-3d-level-on-personal-computer-focused-woman.webp?b=1&s=170667a&w=0&k=20&c=lJYTnHJRYJpsuYd4DRG1F5ApWewwYebnI7jEYdmG9aY="
-                    alt="human"
-                  />
-                </SwiperSlide>
-              </Swiper>
-              <div className="md:m-4">
-                <div>
-                  <SkillsCapsule skill={"HTML"} />
-                  <SkillsCapsule skill={"CSS"} />
-                  <SkillsCapsule skill={"JavaScript"} />
-                  <SkillsCapsule skill={"React js"} />
-                </div>
-                <h3 className="font-protest mt-5 mb-3 text-3xl">Todo App</h3>
-                <p className="text-sm tracking-wide">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Minima, aperiam minus rem beatae fuga mollitia commodi iste
-                  tempora corrupti quaerat nulla velit consectetur. Voluptates,
-                  consequuntur beatae. Labore temporibus esse distinctio!
-                </p>
-                <div className="sm:flex mt-5 gap-4">
-                  <DarkButton lable={"Live Dome"} />
-                  <DarkButton lable={"Code"} />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide
-            className={`${
-              theme == "dark" ? "dark-main-swiper" : "light-main-swiper"
-            }`}
-          >
-            <div className="card h-full w-full p-2 ">
-              <Swiper
-                pagination={false}
-                slidesPerView={1}
-                spaceBetween={30}
-                effect="fade"
-                fadeEffect={{ crossFade: true }}
-                autoplay={{
-                  delay: 2000,
-                  disableOnInteraction: false,
-                }}
-                loop={true}
-                allowTouchMove={false}
-                modules={[Pagination, Autoplay]}
-                className={`${
-                  theme === "dark" ? "dark-child-swiper" : "light-child-swiper"
-                }""`}
-              >
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://images.unsplash.com/photo-1720188228786-e6cb3b668aef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8"
-                    alt="todo"
-                  />
-                </SwiperSlide>
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://media.istockphoto.com/id/1393796813/photo/friends-playing-computer-game.webp?b=1&s=170667a&w=0&k=20&c=bmQtz5S52PBUFC9f6KI23tBSktORQBRgQSedrNGsq0M="
-                    alt="pass"
-                  />
-                </SwiperSlide>
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://media.istockphoto.com/id/1461320320/photo/female-video-game-designer-works-on-a-new-3d-level-on-personal-computer-focused-woman.webp?b=1&s=170667a&w=0&k=20&c=lJYTnHJRYJpsuYd4DRG1F5ApWewwYebnI7jEYdmG9aY="
-                    alt="human"
-                  />
-                </SwiperSlide>
-              </Swiper>
-              <div className="md:m-4">
-                <div>
-                  <SkillsCapsule skill={"HTML"} />
-                  <SkillsCapsule skill={"CSS"} />
-                  <SkillsCapsule skill={"JavaScript"} />
-                  <SkillsCapsule skill={"React js"} />
-                </div>
-                <h3 className="font-protest mt-5 mb-3 text-3xl">Todo App</h3>
-                <p className="text-sm tracking-wide">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Minima, aperiam minus rem beatae fuga mollitia commodi iste
-                  tempora corrupti quaerat nulla velit consectetur. Voluptates,
-                  consequuntur beatae. Labore temporibus esse distinctio!
-                </p>
-                <div className="sm:flex mt-5 gap-4">
-                  <DarkButton lable={"Live Dome"} />
-                  <DarkButton lable={"Code"} />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide
-            className={`${
-              theme == "dark" ? "dark-main-swiper" : "light-main-swiper"
-            }`}
-          >
-            <div className="card h-full w-full p-2 ">
-              <Swiper
-                pagination={false}
-                slidesPerView={1}
-                spaceBetween={30}
-                effect="fade"
-                fadeEffect={{ crossFade: true }}
-                autoplay={{
-                  delay: 2000,
-                  disableOnInteraction: false,
-                }}
-                loop={true}
-                allowTouchMove={false}
-                modules={[Pagination, Autoplay]}
-                className={`${
-                  theme === "dark" ? "dark-child-swiper" : "light-child-swiper"
-                }""`}
-              >
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://images.unsplash.com/photo-1720188228786-e6cb3b668aef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8"
-                    alt="todo"
-                  />
-                </SwiperSlide>
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://media.istockphoto.com/id/1393796813/photo/friends-playing-computer-game.webp?b=1&s=170667a&w=0&k=20&c=bmQtz5S52PBUFC9f6KI23tBSktORQBRgQSedrNGsq0M="
-                    alt="pass"
-                  />
-                </SwiperSlide>
-                <SwiperSlide className="image-swiper">
-                  <img
-                    className=""
-                    src="https://media.istockphoto.com/id/1461320320/photo/female-video-game-designer-works-on-a-new-3d-level-on-personal-computer-focused-woman.webp?b=1&s=170667a&w=0&k=20&c=lJYTnHJRYJpsuYd4DRG1F5ApWewwYebnI7jEYdmG9aY="
-                    alt="human"
-                  />
-                </SwiperSlide>
-              </Swiper>
-              <div className="md:m-4">
+              <div className="md:m-4 mx-2">
                 <div>
                   <SkillsCapsule skill={"HTML"} />
                   <SkillsCapsule skill={"CSS"} />

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import SocialIcon from "./SocialIcon";
 import TypingAnimation from "./TypingAnimation";
 import { ThemeContext } from "@/context/ThemeProvider";
@@ -60,8 +60,14 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="mb-8 lg:mb-0 flex justify-center items-center">
-          <img className="hero-img" src={"/asset/pi.png"} alt="picture" />
+        <div className="relative mb-8 lg:mb-0 flex justify-center items-center">
+          <Image
+            className="hero-img"
+            width={500}
+            height={500}
+            src={"/asset/pi.png"}
+            alt="picture"
+          />
         </div>
       </div>
     </section>

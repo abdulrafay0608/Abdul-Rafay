@@ -1,19 +1,16 @@
 "use client";
 import Image from "next/image";
-import React, { useContext } from "react";
-import { ThemeContext } from "@/context/ThemeProvider";
-import Heading from "@/ui-component/Heading";
+import React from "react";
 import DarkButton from "@/ui-component/DarkButton";
 import Link from "next/link";
 
 const About = () => {
-  const { theme } = useContext(ThemeContext);
 
   return (
     <section >
       <div className="min-h-[90vh] relative flex flex-col lg:flex-row justify-around items-center">
         <div className="about-img px-2 lg:p-0 mb-12 lg:m-6 lg:order-2">
-          <img className="" src={"/asset/profile.png"} alt="My-Picture" />
+          <Image className="img" layout="fill"  src={"/asset/profile.png"} alt="My-Picture" />
         </div>
 
         <div className="md:order-1">
