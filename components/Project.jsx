@@ -15,7 +15,10 @@ const Project = () => {
   return (
     <section >
       <div className="flex justify-center items-center lg:my-0 my-10">
-        <SwiperCard />
+        {/* <SwiperCard /> */}
+        <div className="text-5xl font-[900]">
+          Project Upload Soon
+        </div>
       </div>
       {/* <div className="mt-20">
         <div className="grid md:grid-cols-2 grid-flow-col-1 justify-center items-center bg-slate-900 hover:bg-slate-950 transition-all p-4 border-4 border-double my-12 border-yellow-400 mx-2 md:mx-20">
