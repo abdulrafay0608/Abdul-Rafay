@@ -16,7 +16,7 @@ const Skills = () => {
           With extensive experience as front-end developer, I specialize in
           crafting exceptional web experiences. Utilizing HTML, CSS, JavaScript,
           React.js, Next.js, Firebase, MongoDB, Express.js, Node.js, and basic
-          React Native, I've built dynamic websites and frontend applications,
+          React Native, I&apos;ve built dynamic websites and frontend applications,
           showcasing proficiency in both back-end and front-end development. My
           primary focus is on front-end development, where I bring designs to
           life and ensure seamless user interactions.

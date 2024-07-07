@@ -16,7 +16,7 @@ const About = () => {
         <div className="md:order-1">
           <div className="md:max-w-[550px] w-full px-3 text-sm leading-7">
             <p>
-              Hello! I'm Abdul Rafay, a front-end web developer with a passion
+              Hello! I&apos;m Abdul Rafay, a front-end web developer with a passion
               for creating dynamic and responsive websites. With a strong
               foundation in HTML, CSS, JavaScript, and React (including
               Next.js), I specialize in turning complex problems into elegant
@@ -30,7 +30,7 @@ const About = () => {
               This curiosity led me to undertake formal training at Saylani Mass
               IT Training provided me with a solid understanding of the
               fundamentals and advanced concepts of web development. Since then,
-              I've increased my skills through a variety of projects,
+              I&apos;ve increased my skills through a variety of projects,
               continually learning and adapting to the latest technologies and
               best practices.
             </p>
