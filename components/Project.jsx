@@ -7,22 +7,21 @@ import React, { useContext } from "react";
 import { RiLiveFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa6";
 import { ThemeContext } from "@/context/ThemeProvider";
+import SwiperCard from "./SwiperCard";
 
 const Project = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <section id="portfolio">
-      <div className="mt-20">
-        <h2 className="text-center text-5xl font-extrabold">Portfolio</h2>
-        <p className="text-center mx-2 font-mono">
-          &quot;Each project is a unique piece of development.&quot;
-        </p>
-
+    <section >
+      <div className="flex justify-center items-center lg:my-0 my-10">
+        <SwiperCard />
+      </div>
+      {/* <div className="mt-20">
         <div className="grid md:grid-cols-2 grid-flow-col-1 justify-center items-center bg-slate-900 hover:bg-slate-950 transition-all p-4 border-4 border-double my-12 border-yellow-400 mx-2 md:mx-20">
           <div className="text-container">
             <h2 className="text-center text-2xl font-extrabold my-4 text-white">
-             Pass Protector
+              Pass Protector
             </h2>
             <p className="md:mx-6 text-center text-slate-300">
               PassProtector is an innovative application designed to securely
@@ -436,7 +435,7 @@ const Project = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -1,0 +1,19 @@
+.btn {
+  padding: 12px 40px;
+  border: 2px solid transparent;
+  outline: none;
+  background: #0d2232;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+  z-index: 0;
+  border-radius: 100px;
+  transition: all 0.3s ease-in;
+}
+
+
+.btn:hover {
+  border: 2px solid #000;
+  background: #000;
+}

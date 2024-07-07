@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
+html,
+body {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -13,133 +20,170 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-track {
   margin: 0px 6px;
   scroll-behavior: smooth;
-  background-color: rgb(15 23 42);
+  background-color: #ccc;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(148 163 184);
-  width: 10px;
-  height: 60px;
-  border-radius: 20px;
+  background-color: #95C11E;
+  width: 8px;
+  /* height: 60px; */
+  /* border-radius: 20px; */
 }
 
-.scroll-item {
+*::selection {
+  color: #95C11E;
+  background-color: #fff;
+}
+
+.font-protest {
+  font-family: "Protest Riot", sans-serif;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+.dark {
+  background: #041622;
+  color: #ffffff;
+}
+
+
+.light {
+  background: white;
+  color: #222;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  /* mix-blend-mode: screen; */
+  filter: drop-shadow(0px 0px 5px orange);
+}
+
+.about-img {
+  border: 2px solid #fff;
   position: relative;
-  height: 300px;
-  overflow: hidden;
-}
-
-.minus0ne-scroll-item {
-  background: url(/assets/passprotector.png);
-  background-size: cover;
-  height: 300px !important;
-  background-position: top;
-  opacity: 60%;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: all 1s ease;
-}
-
-.zero-scroll-item {
-  background: url(/assets/sidcupfamilygolf.png);
-  background-size: cover;
-  height: 300px !important;
-  background-position: top;
-  opacity: 60%;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: all 1s ease;
-}
-
-.first-scroll-item {
-  background: url(/assets/sundownStudio.png);
-  background-size: cover;
-  height: 300px !important;
-  background-position: top;
-  opacity: 60%;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: all 1s ease;
-}
-
-.second-scroll-item {
-  background: url(/assets/blog.png);
-  background-size: cover;
-  height: 300px !important;
-  background-position: top;
-  opacity: 60%;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: all 1s ease;
-}
-
-.third-scroll-item {
-  background: url(/assets/human.jpg);
-  background-size: cover;
-  height: 300px !important;
-  background-position: top;
-  opacity: 60%;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: all 1s ease;
+  min-width: 360px;
+  min-height: 360px;
+  border-radius: 15px;
+  transition: all 0.3s ease-in;
 }
 
 
-.fourth-scroll-item {
-  background: url(/assets/todo.png);
-  background-size: cover;
-  height: 300px !important;
-  background-position: top;
-  opacity: 60%;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: all 1s ease;
-}
-
-.fifth-scroll-item {
-  background: url(/assets/shoes.png);
-  background-size: cover;
-  height: 300px !important;
-  background-position: top;
-  opacity: 60%;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: all 1s ease;
-}
-
-.sixth-scroll-item {
-  background: url(/assets/amazone.png);
-  background-size: cover;
-  height: 300px !important;
-  background-position: top;
-  opacity: 60%;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: all 1s ease;
-}
-
-/* .first-scroll-item {
+.about-img img {
+  mix-blend-mode: luminosity;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
+  height: 100%;
+  width: 100%;
+  top: -4%;
+  left: -4%;
+  background: linear-gradient(to top right, #1d1f18, #03045e);
+  border-radius: 15px;
+  transition: all 0.3s ease-in;
+}
 
-.minus0ne-scroll-item:hover,
-.zero-scroll-item:hover,
-.first-scroll-item:hover,
-.second-scroll-item:hover,
-.third-scroll-item:hover,
-.fourth-scroll-item:hover,
-.fifth-scroll-item:hover,
-.sixth-scroll-item:hover {
-  background-position: bottom;
+.about-img img:hover {
+  mix-blend-mode: normal;
+  background: linear-gradient(to top left, #1d1f18, #03045e);
+  top: -8%;
+  left: -8%;
+}
+
+.about-img:hover {
+  border: 4px solid #03045e;
+}
+
+
+
+@media (max-width:350px) {
+  .about-img {
+    border: 2px solid #03045e;
+    position: relative;
+    min-height: 250px;
+    min-width: 250px;
+    /* padding: 5px; */
+    border-radius: 15px;
+    transition: all 0.3s ease-in;
+  }
+
+
+  .about-img img {
+    mix-blend-mode: luminosity;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -4%;
+    left: -4%;
+    background: linear-gradient(to top right, #1d1f18, #03045e);
+    border-radius: 15px;
+    transition: all 0.3s ease-in;
+  }
+
+  .about-img img:hover {
+    mix-blend-mode: normal;
+    background: linear-gradient(to top left, #1d1f18, #03045e);
+    top: -8%;
+    left: -8%;
+  }
+
+  .about-img:hover {
+    border: 4px solid #03045e;
+  }
+
+
+}
+
+
+
+
+@layer utilities {
+  .sparkle {
+    @apply absolute bg-blue-500 h-1 w-1 rounded-full filter blur-[1px] animation-move;
+  }
+
+  @keyframes move {
+    0% {
+      opacity: 0;
+      transform: translate(0, 100%);
+    }
+
+    50% {
+      opacity: 1;
+      transform: translate(500%, -100%);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translate(1000%, 100%);
+    }
+  }
+
+  .animation-move {
+    animation: move 5s ease-in-out;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.target,
+.cursor-outline,
+.cursor-dot {
+  top: 50%;
+  left: 10%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg);
 }

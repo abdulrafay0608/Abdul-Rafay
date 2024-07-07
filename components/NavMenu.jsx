@@ -18,11 +18,11 @@ export const NavMenu = [
         url: "#about",
         icon: <FaUserNurse />
     },
-    {
-        title: "Service",
-        url: "#service",
-        icon: <FaServicestack />
-    },
+    // {
+    //     title: "Service",
+    //     url: "#service",
+    //     icon: <FaServicestack />
+    // },
     {
         title: "Skills",
         url: "#skills",

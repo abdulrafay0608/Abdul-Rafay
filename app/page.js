@@ -1,65 +1,130 @@
-"use client"
-
+"use client";
+import gsap from "gsap";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import AnimatedBackground from "@/components/Gola";
 import Hero from "@/components/Hero";
-import { Loader } from "@/components/Loader";
 import Navbar from "@/components/Navbar";
 import Project from "@/components/Project";
-import Services from "@/components/Services";
 import Skills from "@/components/Skills";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import { FaArrowAltCircleUp } from "react-icons/fa";
+import Heading from "@/ui-component/Heading";
+import { useContext, useEffect, useState } from "react";
+import { ThemeContext } from "@/context/ThemeProvider";
 
 export default function Home() {
-
+  const { theme } = useContext(ThemeContext);
   const [loading, setLoading] = useState(true);
   const [isOpen, setIsOpen] = useState("hidden");
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const controlNavbar = () => {
-    if (window.scrollY > 150) {
-      setIsOpen("block");
-    } else {
-      setIsOpen("hidden");
-    }
-    setLastScrollY(window.scrollY);
-  };
-
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
+    gsap.set(".cursor-dot", { scale: 0.1 });
+    gsap.set(".cursor-outline", { scale: 0.6 });
+    const xCTo = gsap.quickTo(".cursor-outline", "left", {
+      duration: 0.2,
+      ease: "power3",
+    });
+    const yCTo = gsap.quickTo(".cursor-outline", "top", {
+      duration: 0.2,
+      ease: "power3",
+    });
 
-    window.addEventListener("scroll", controlNavbar);
-    return () => {
-      window.removeEventListener("scroll", controlNavbar);
+    const xDTo = gsap.quickTo(".cursor-dot", "left", {
+      duration: 0.6,
+      ease: "power3",
+    });
+    const yDTo = gsap.quickTo(".cursor-dot", "top", {
+      duration: 0.6,
+      ease: "power3",
+    });
+
+    let isVisible = false;
+
+    const mouseMove = (e) => {
+      if (!isVisible) {
+        gsap.set(".cursor-outline, .cursor-dot", { opacity: 1 });
+        isVisible = true;
+      }
+
+      const cursorPosition = {
+        left: e.clientX,
+        top: e.clientY,
+      };
+
+      xCTo(cursorPosition.left);
+      yCTo(cursorPosition.top);
+      xDTo(cursorPosition.left);
+      yDTo(cursorPosition.top);
     };
 
-  }, [lastScrollY]);
+    document.addEventListener("mousemove", mouseMove);
 
+    return () => {
+      document.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+
+  // const controlNavbar = () => {
+  //   if (window.scrollY > 150) {
+  //     setIsOpen("block");
+  //   } else {
+  //     setIsOpen("hidden");
+  //   }
+  //   setLastScrollY(window.scrollY);
+  // };
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 1000);
+
+  //   window.addEventListener("scroll", controlNavbar);
+  //   return () => {
+  //     window.removeEventListener("scroll", controlNavbar);
+  //   };
+  // }, [lastScrollY]);
 
   return (
     <>
-      {loading ? <Loader /> :
-        <div className="relative">
-          {/* <div className={`sticky z-50 top-[90vh] mx-2 md:mx-8 text-white text-2xl transition-all duration-300 ${isOpen}`} >
-            <Link id="home" href={""} className="bg-slate-700 hover:bg-slate-800 p-2">
-              <FaArrowAltCircleUp color="#fff"  />
-            </Link>
-          </div> */}
-          <Navbar />
-          <Hero />
-          <About />
-          <Services />
-          <Skills />
-          <Project />
-          <Contact />
-          <Footer />
-        </div >
-      }
+      <div id="home">
+        <div className="hidden sm:block relative">
+          <div className="fixed z-50">
+            <div
+              className={`${
+                theme === "dark" ? "border-white border" : "border border-black"
+              } cursor-outline absolute w-20 h-20   rounded-full mix-blend-difference pointer-events-none opacity-0`}
+            ></div>
+            <div
+              className={`${
+                theme === "dark"
+                  ? " bg-[#ccc] border border-[#ccc]"
+                  : "border bg-black  border-black"
+              } cursor-dot absolute w-20 h-20 border rounded-full mix-blend-difference pointer-events-none opacity-0`}
+            ></div>
+          </div>
+        </div>
+        <AnimatedBackground />
+        <Navbar />
+        <Hero />
+        <div id="about" className="my-12 lg:m-0">
+          <Heading heading={"About us"} />
+        </div>
+        <About />
+        <div id="skills" className="my-12 lg:m-0">
+          <Heading heading={"Skills"} />
+        </div>
+        <Skills />
+        <div id="portfolio" className="my-12 lg:m-0">
+          <Heading heading={"Project"} />
+        </div>
+        <Project />
+        <div id="contact" className="text-left my-12">
+          <Heading heading={"Get in Touch"} />
+        </div>
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 }
