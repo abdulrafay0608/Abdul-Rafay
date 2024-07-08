@@ -60,13 +60,15 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="relative mb-8 lg:mb-0 flex justify-center items-center">
+        <div className="rounded-full relative mb-8 lg:mb-0 flex justify-center items-center">
+         
+
           <Image
             className="hero-img"
-            width={500}
-            height={500}
-            src={"/asset/pi.png"}
-            alt="picture"
+            width={550}
+            height={550}
+            src={"/svg/hero.svg"}
+            alt="computer"
           />
         </div>
       </div>

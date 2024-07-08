@@ -14,7 +14,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <link rel="icon" href="/assets/ARlogo.png" />
-        
       </Head>
       <body className={inter.className}>
         <ThemeProvider>

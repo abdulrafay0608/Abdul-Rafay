@@ -20,6 +20,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  height: 88vh;
 }
 
 .card {
@@ -115,10 +116,10 @@
 }
 
 .image-swiper Image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 50px !important;
+  /* height: 100%;
+  width: 100%; */
+  /* object-fit: cover; */
+  /* border-radius: 50px !important; */
 }
 
 

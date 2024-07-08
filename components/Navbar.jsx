@@ -1,17 +1,19 @@
 "use client";
-import { MdDarkMode } from "react-icons/md";
-import { useContext, useEffect, useState } from "react";
+import { MdDarkMode, MdOpacity } from "react-icons/md";
+import { useContext, useEffect, useRef, useState } from "react";
 import { NavMenu } from "./NavMenu";
 import Link from "next/link";
 import { MdOutlineLightMode } from "react-icons/md";
 import { ThemeContext } from "@/context/ThemeProvider";
 import DarkButton from "@/ui-component/DarkButton";
 
-const Navbar = () => {
+const Navbar = ({ timeline, ease }) => {
   const { theme, LightMode, DarkMode } = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(false);
   const [show, setShow] = useState("translate-y-0");
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  // const menuRefs = useRe
 
   const controlNavbar = () => {
     if (window.scrollY > 200) {
@@ -25,6 +27,17 @@ const Navbar = () => {
     }
     setLastScrollY(window.scrollY);
   };
+
+  // useEffect(() => {
+  // timeline.from(menuRefs.current,{
+  // y: 50,
+  // x: 0,
+  // opacity: 0,
+  // ease: ease,
+  // stagger: 0.5,
+  // duration: 0.5,
+  // });
+  // });
 
   useEffect(() => {
     setIsOpen(false);
@@ -51,6 +64,7 @@ const Navbar = () => {
           <Link
             key={index}
             href={menu.url}
+            // ref={(el) => (menuRefs.current[index] = el)}
             onClick={() => setIsOpen(!isOpen)}
             className={`${
               theme === "dark"
@@ -98,20 +112,37 @@ const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
           className={`${theme === "dark" ? "text-white" : "text-slate-950"} `}
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
-          </svg>
+          {isOpen ? (
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          ) : (
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          )}
         </button>
       </div>
 
@@ -120,7 +151,7 @@ const Navbar = () => {
         <nav
           className={`${theme === "dark" ? "bg-[#051622]/90" : "light"} ${
             isOpen ? "right-[0%]" : "-right-[100%]"
-          } lg:hidden -right-[100%]  z-40 absolute top-[70px]  w-9/12 h-screen p-3 ease-out transition duration-500 transform`}
+          } flex flex-col justify-center items-center lg:hidden -right-[100%] -z-10 absolute top-[0px]  w-9/12 h-screen p-3 ease-out transition duration-500 transform`}
         >
           {NavMenu.map((menu, index) => (
             <Link
@@ -131,9 +162,9 @@ const Navbar = () => {
                 theme === "dark"
                   ? "text-white hover:text-white/70 "
                   : "text-slate-950 hover:text-slate-800"
-              } flex items-center hover:underline p-3 leading-10	`}
+              } flex justify-center items-center p-5 hover:underline`}
             >
-              <span className="ml-2">{menu.title}</span>
+              <span>{menu.title}</span>
             </Link>
           ))}
         </nav>

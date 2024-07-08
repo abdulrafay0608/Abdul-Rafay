@@ -12,6 +12,7 @@ import DarkButton from "@/ui-component/DarkButton";
 import { ThemeContext } from "@/context/ThemeProvider";
 import SkillsCapsule from "@/ui-component/SkillsCapsule";
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
@@ -27,7 +28,7 @@ const projects = [
     title: "Sidcup Family Golf Clone",
     description:
       "In this project, I recreated the engaging landing page for Sidcup Family Golf, a multi-purpose golf facility in London. Using HTML, CSS, and JavaScript, I faithfully replicated the original design and interactive elements.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "Swipper js"],
     image: "/asset/golf.png",
     liveDemo: "https://rafay-sidcupfamilygolf.vercel.app",
     codeLink: "https://github.com/abdulrafay0608/Sidcup-Family-Golf",
@@ -36,7 +37,7 @@ const projects = [
     title: "Sundown Studio Clone",
     description:
       "In this project, I recreated the landing page for Sundown Studio, a design studio. This clone replicates the design and interactive features of the original website using HTML, CSS, and JavaScript.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "Swipper js"],
     image: "/asset/sundown.png",
     liveDemo: "https://rafay-sundown.vercel.app",
     codeLink: "https://github.com/abdulrafay0608/Sundown",
@@ -55,7 +56,7 @@ const projects = [
     description:
       "An innovative platform that generates prompts tailored to users' search intent, powered by Next.js, Node.js, MongoDB, and Express for a seamless experience.",
     technologies: ["Next.js", "Tailwind CSS", "MongoDB"],
-    image: "/asset/human.png",
+    image: "/asset/human.jpg",
     liveDemo: "https://humangeneratedprompts.netlify.app/",
     codeLink: "https://github.com/abdulrafay0608/Human-Generated-Prompt",
   },
@@ -143,13 +144,23 @@ export default function SwiperCard() {
             },
           }}
         >
-          <SwiperSlide
-            className={`${
-              theme == "dark" ? "dark-main-swiper" : "light-main-swiper"
-            }`}
-          >
-            <div className="card h-[300px] w-[500px] p-2 ">
-              <Swiper
+          {projects.map((pro, i) => {
+            return (
+              <SwiperSlide
+                key={i}
+                className={`${
+                  theme == "dark" ? "dark-main-swiper" : "light-main-swiper"
+                }`}
+              >
+                <div className="card h-[200px] md:h-[300px] w-[500px] p-2 ">
+                  <Image
+                    height={300}
+                    width={300}
+                    className="h-[200px] md:h-[300px] overflow-hidden w-full object-cover object-top rounded-md mix-blend-saturation"
+                    src={pro.image}
+                    alt={pro.title}
+                  />
+                  {/* <Swiper
                 pagination={false}
                 slidesPerView={1}
                 spaceBetween={30}
@@ -196,28 +207,84 @@ export default function SwiperCard() {
                     alt="human"
                   />
                 </SwiperSlide>
-              </Swiper>
-              <div className="md:m-4 mx-2">
-                <div>
-                  <SkillsCapsule skill={"HTML"} />
-                  <SkillsCapsule skill={"CSS"} />
-                  <SkillsCapsule skill={"JavaScript"} />
-                  <SkillsCapsule skill={"React js"} />
+              </Swiper> */}
+                  <div className="md:mx-2 my-4 mx-2">
+                    <div className="flex flex-wrap gap-3">
+                      {pro.technologies[0] && (
+                        <div
+                          className={`${
+                            theme === "dark"
+                              ? "border-2 border-gray-400 bg-gray-700"
+                              : "border-2 border-slate-950 bg-white"
+                          } text-[11px] max-w-max rounded-[50px] py-2 px-4`}
+                        >
+                          {pro.technologies[0]}
+                        </div>
+                      )}
+                      {pro.technologies[1] && (
+                        <div
+                          className={`${
+                            theme === "dark"
+                              ? "border-2 border-gray-400 bg-gray-700"
+                              : "border-2 border-slate-950 bg-white"
+                          } text-[11px] max-w-max rounded-[50px] py-2 px-4`}
+                        >
+                          {pro.technologies[1]}
+                        </div>
+                      )}
+                      {pro.technologies[2] && (
+                        <div
+                          className={`${
+                            theme === "dark"
+                              ? "border-2 border-gray-400 bg-gray-700"
+                              : "border-2 border-slate-950 bg-white"
+                          } text-[11px] max-w-max rounded-[50px] py-2 px-4`}
+                        >
+                          {pro.technologies[2]}
+                        </div>
+                      )}
+                      {pro.technologies[3] && (
+                        <div
+                          className={`${
+                            theme === "dark"
+                              ? "border-2 border-gray-400 bg-gray-700"
+                              : "border-2 border-slate-950 bg-white"
+                          } text-[11px] max-w-max rounded-[50px] py-2 px-4`}
+                        >
+                          {pro.technologies[3]}
+                        </div>
+                      )}
+                      {pro.technologies[4] && (
+                        <div
+                          className={`${
+                            theme === "dark"
+                              ? "border-2 border-gray-400 bg-gray-700"
+                              : "border-2 border-slate-950 bg-white"
+                          } text-[11px] max-w-max rounded-[50px] py-2 px-4`}
+                        >
+                          {pro.technologies[4]}
+                        </div>
+                      )}
+                    </div>
+                    <h3 className="font-protest mt-5 mb-3 text-3xl">
+                      {pro.title}
+                    </h3>
+                    <p className="text-sm line-clamp-4 tracking-wide">
+                      {pro.description}
+                    </p>
+                    <div className="flex mt-4 gap-3">
+                      <Link target="_blank" href={pro.liveDemo}>
+                        <DarkButton lable={"Live"} />
+                      </Link>
+                      <Link target="_blank" href={pro.codeLink}>
+                        <DarkButton lable={"Code"} />
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="font-protest mt-5 mb-3 text-3xl">Todo App</h3>
-                <p className="text-sm tracking-wide">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Minima, aperiam minus rem beatae fuga mollitia commodi iste
-                  tempora corrupti quaerat nulla velit consectetur. Voluptates,
-                  consequuntur beatae. Labore temporibus esse distinctio!
-                </p>
-                <div className="sm:flex mt-5 gap-4">
-                  <DarkButton lable={"Live Dome"} />
-                  <DarkButton lable={"Code"} />
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
 
         <div className="swiper-pagination"></div>

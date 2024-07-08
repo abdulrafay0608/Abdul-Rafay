@@ -101,8 +101,8 @@ const Contact = () => {
           <Image
             width={500}
             height={500}
-            src="/asset/pi.png"
-            className="max-h-[500px] max-w-[500px]"
+            src="/svg/envelope.svg"
+            className="mix-blend-luminosity hover:mix-blend-normal transition-all duration-300 ease-out delay-700 max-h-[500px] max-w-[500px]"
             alt="contact"
           />
         </div>

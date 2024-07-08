@@ -1,5 +1,6 @@
 "use client";
-import gsap from "gsap";
+
+import { gsap, Power3 } from "gsap";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -9,7 +10,7 @@ import Navbar from "@/components/Navbar";
 import Project from "@/components/Project";
 import Skills from "@/components/Skills";
 import Heading from "@/ui-component/Heading";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { ThemeContext } from "@/context/ThemeProvider";
 
 export default function Home() {
@@ -17,6 +18,8 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [isOpen, setIsOpen] = useState("hidden");
   const [lastScrollY, setLastScrollY] = useState(0);
+  let tl = new gsap.timeline();
+  let ease = Power3.easeOut;
 
   useEffect(() => {
     gsap.set(".cursor-dot", { scale: 0.1 });
@@ -89,7 +92,7 @@ export default function Home() {
     <>
       <div id="home">
         <div className="hidden sm:block relative">
-          <div className="fixed z-50">
+          <div className="fixed top-0 left-0 z-50">
             <div
               className={`${
                 theme === "dark" ? "border-white border" : "border border-black"
@@ -105,21 +108,21 @@ export default function Home() {
           </div>
         </div>
         <AnimatedBackground />
-        <Navbar />
+        <Navbar timeline={tl} ease={ease} />
         <Hero />
-        <div id="about" className="my-12 lg:m-0">
+        <div id="about" className="text-5xl my-12 lg:m-0">
           <Heading heading={"About us"} />
         </div>
         <About />
-        <div id="skills" className="my-12 lg:m-0">
+        <div id="skills" className="text-5xl my-12 lg:m-0">
           <Heading heading={"Skills"} />
         </div>
         <Skills />
-        <div id="portfolio" className="my-12 lg:m-0">
+        <div id="portfolio" className="text-5xl my-12 lg:m-0">
           <Heading heading={"Project"} />
         </div>
         <Project />
-        <div id="contact" className="text-left my-12">
+        <div id="contact" className="text-5xl text-left my-12">
           <Heading heading={"Get in Touch"} />
         </div>
         <Contact />
