@@ -12,6 +12,8 @@ import Skills from "@/components/Skills";
 import Heading from "@/ui-component/Heading";
 import { useContext, useEffect, useRef, useState } from "react";
 import { ThemeContext } from "@/context/ThemeProvider";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const { theme } = useContext(ThemeContext);
@@ -106,6 +108,17 @@ export default function Home() {
               } cursor-dot absolute w-20 h-20 border rounded-full mix-blend-difference pointer-events-none opacity-0`}
             ></div>
           </div>
+        </div>
+        <div className="cursor-pointer fixed right-[30px] bottom-[30px]  z-50 w-[50px] hover:scale-125 transition-all duration-300 h-[50px] rounded-full">
+          <Link href={"https://wa.me/03160025477"} target="_blank">
+          <Image
+            src={"/svg/whatsapp.svg"}
+            width={100}
+            height={100}
+            className=" w-full h-full"
+            alt={"whatsapp"}
+          />
+          </Link>
         </div>
         <AnimatedBackground />
         <Navbar timeline={tl} ease={ease} />
